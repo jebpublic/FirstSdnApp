@@ -1,0 +1,2933 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: edge 07-18-2017
+  description: 'TODO: Add Description'
+  license:
+    name: MIT
+    url: http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT
+host: dev-edge-backend.unomiclabs.com:3002
+basePath: /
+securityDefinitions:
+  auth:
+    type: oauth2
+    flow: implicit
+    authorizationUrl: http://dev-edge-backend.unomiclabs.com:3002
+    scopes: {}
+schemes:
+- http
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /auth/login:
+    post:
+      description: 'TODO: Add Description'
+      summary: login
+      tags:
+      - auth
+      operationId: login
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/LoginRequest'
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /auth/login
+          headers:
+            Content-Type: application/json
+          body: "{ \n\"username\":\"jeb@unomicedge.com\",\n\"password\":\"unomicIs#1\"\n}"
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: login
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/controller/local_computer/scope:
+    put:
+      description: 'TODO: Add Description'
+      summary: add vnet scope
+      tags:
+      - controller
+      operationId: add vnet scope
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/AddVnetScoperequest'
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: PUT
+          uri: /api/controller/local_computer/scope
+          headers:
+            Content-Type: application/json
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+          body: '{"vnet":["localhost_switch"]}'
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: add vnet scope
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/controller/:
+    post:
+      description: 'TODO: Add Description'
+      summary: create new Copa Connector
+      tags:
+      - controller
+      operationId: create new Copa Connector
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateNewCopaConnectorrequest'
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /api/controller/
+          headers:
+            Content-Type: application/json
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+          body: >-
+            {
+            	"controllerInfo":{
+            		"CONTROLLER_IP":"172.20.0.5",
+            		"CONTROLLER_PASSWORD":"admin",
+            		"CONTROLLER_USERNAME":"Administrator",
+            		"CONTROLLER_PORT":"8080",
+            		"_id": "local_computer"
+            	}
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: create new Copa Connector
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/device/register/macAddress:
+    post:
+      description: 'TODO: Add Description'
+      summary: preregister by mac
+      tags:
+      - device
+      operationId: preregister by mac
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/PreregisterByMacrequest'
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /api/device/register/macAddress
+          headers:
+            Content-Type: application/json
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+          body: >-
+            {
+            	"macAddress":"B8:27:EB:37:95:33"
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: preregister by mac
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/device/<deviceID>:
+    delete:
+      description: 'TODO: Add Description'
+      summary: delete device
+      tags:
+      - device
+      operationId: delete device
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: DELETE
+          uri: /api/device/<deviceID>
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: delete device
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/device/<userID>:
+    get:
+      description: 'TODO: Add Description'
+      summary: get device by id
+      tags:
+      - device
+      operationId: get device by id
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/device/<userID>
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get device by id
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/device/1:
+    put:
+      description: 'TODO: Add Description'
+      summary: update device by id
+      tags:
+      - device
+      operationId: update device by id
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/UpdateDeviceByIdrequest'
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: PUT
+          uri: /api/device/1
+          headers:
+            Content-Type: application/json
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+          body: >-
+            {
+              "id": 1,
+              "name": "raspberry pi",
+              "deviceType": "laptop",
+              "activeGroupID": 1
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: update device by id
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/group:
+    get:
+      description: 'TODO: Add Description'
+      summary: '[future] get groups'
+      tags:
+      - group
+      operationId: '[future] get groups'
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/group
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: '[future] get groups'
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    post:
+      description: 'TODO: Add Description'
+      summary: create new group
+      tags:
+      - group
+      operationId: create new group
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateNewGrouprequest'
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /api/group
+          headers:
+            Content-Type: application/json
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+          body: >-
+            {"name":"test group 2"
+
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: create new group
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    delete:
+      description: 'TODO: Add Description'
+      summary: delete group
+      tags:
+      - group
+      operationId: delete group
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: DELETE
+          uri: /api/group
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: delete group
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/group/70001:
+    get:
+      description: 'TODO: Add Description'
+      summary: get group by id
+      tags:
+      - group
+      operationId: get group by id
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/group/70001
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get group by id
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/group/70001/devices:
+    get:
+      description: 'TODO: Add Description'
+      summary: get devices in a group
+      tags:
+      - group
+      operationId: get devices in a group
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/group/70001/devices
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get devices in a group
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/group/<groupID>/score:
+    get:
+      description: 'TODO: Add Description'
+      summary: group score
+      tags:
+      - group
+      operationId: group score
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/group/<groupID>/score
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: group score
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/group/35/policy:
+    get:
+      description: 'TODO: Add Description'
+      summary: get group policy
+      tags:
+      - group
+      operationId: get group policy
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/group/35/policy
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get group policy
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/group/<groupID>/inviteNewMember:
+    post:
+      description: 'TODO: Add Description'
+      summary: invite new member
+      tags:
+      - group
+      operationId: invite new member
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/InviteNewMemberrequest'
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /api/group/<groupID>/inviteNewMember
+          headers:
+            Content-Type: application/json
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+          body: >-
+            {
+                "username": "throw@away.com",
+                "password": "password",
+                "role": "member"
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: invite new member
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/user/<userID>/registeredDevices:
+    get:
+      description: 'TODO: Add Description'
+      summary: '[archive] get user registered devices'
+      tags:
+      - group
+      operationId: '[archive] get user registered devices'
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/user/<userID>/registeredDevices
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: '[archive] get user registered devices'
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/organization:
+    post:
+      description: 'TODO: Add Description'
+      summary: create new org
+      tags:
+      - organization
+      operationId: create new org
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateNewOrgrequest'
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /api/organization
+          headers:
+            Content-Type: application/json
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+          body: "{\n	\"name\":\"test Org\",\n	\"orgAdminID\":10001,\n	\"email\":\"emailme@me.com\",\n	\"phone\":\"1234567890\",\n	\"location\":{\n		\"city\":\"my city\", \n	\"zip\":\"12345\",\n	\"state\":\"CA\",\n	\"country\":\"US\"\n	}\n}"
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: create new org
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/organization/79:
+    get:
+      description: 'TODO: Add Description'
+      summary: get org by ID
+      tags:
+      - organization
+      operationId: get org by ID
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/organization/79
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get org by ID
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    delete:
+      description: 'TODO: Add Description'
+      summary: '[future] get org by ID'
+      tags:
+      - organization
+      operationId: '[future] get org by ID'
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: DELETE
+          uri: /api/organization/79
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: '[future] get org by ID'
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/organization/79/teams:
+    get:
+      description: 'TODO: Add Description'
+      summary: get org owned teams
+      tags:
+      - organization
+      operationId: get org owned teams
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/organization/79/teams
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get org owned teams
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/organization/79/sites:
+    get:
+      description: 'TODO: Add Description'
+      summary: get org owned sites
+      tags:
+      - organization
+      operationId: get org owned sites
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/organization/79/sites
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get org owned sites
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/organization/<orgID>/orgMembers:
+    post:
+      description: 'TODO: Add Description'
+      summary: invite member to org
+      tags:
+      - organization
+      operationId: invite member to org
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /api/organization/<orgID>/orgMembers
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: invite member to org
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/site:
+    post:
+      description: 'TODO: Add Description'
+      summary: create new site
+      tags:
+      - site
+      operationId: create new site
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateNewSiterequest'
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/site/<siteID>:
+    get:
+      description: 'TODO: Add Description'
+      summary: get site by id
+      tags:
+      - site
+      operationId: get site by id
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/site/<siteID>
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get site by id
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/site/<siteID>/switches:
+    get:
+      description: 'TODO: Add Description'
+      summary: get site switches
+      tags:
+      - site
+      operationId: get site switches
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/site/<siteID>/switches
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get site switches
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    post:
+      description: 'TODO: Add Description'
+      summary: add site switch
+      tags:
+      - site
+      operationId: add site switch
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/AddSiteSwitchrequest'
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /api/site/<siteID>/switches
+          headers:
+            Content-Type: application/json
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+          body: >-
+            {"switchConfig":{
+            	"name": "test switch",
+            	"dpid":"test dpid",
+            	"macAddress":"11:22:33:44:55:66",
+            	"ipAddress":"1.2.3.4",
+            	"gatewayIp":"11.12.13.14",
+            	"gatewayMac":"01.02.03.04.05.06",
+            	"unmanagedPorts":[],
+            	"managedPorts":[]
+            }}
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: add site switch
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/site/<siteID>/controller:
+    put:
+      description: 'TODO: Add Description'
+      summary: Change Controller
+      tags:
+      - site
+      operationId: Change Controller
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/ChangeControllerrequest'
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: PUT
+          uri: /api/site/<siteID>/controller
+          headers:
+            Content-Type: application/json
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+          body: '{"controllerID":"H10LfLY7b"}'
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Change Controller
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/site/31/switches:
+    put:
+      description: 'TODO: Add Description'
+      summary: update site switch
+      tags:
+      - site
+      operationId: update site switch
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/UpdateSiteSwitchrequest'
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: PUT
+          uri: /api/site/31/switches
+          headers:
+            Content-Type: application/json
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+          body: >-
+            {"switchConfig":{
+            	"name": "test switch",
+            	"dpid":"test dpid",
+            	"macAddress":"11:22:33:44:55:66",
+            	"ipAddress":"1.2.3.4",
+            	"gatewayIp":"11.12.13.14",
+            	"gatewayMac":"01.02.03.04.05.06",
+            	"unmanagedPorts":[],
+            	"managedPorts":[]
+            }}
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: update site switch
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/site/52:
+    delete:
+      description: 'TODO: Add Description'
+      summary: '[future] delete site by id'
+      tags:
+      - site
+      operationId: '[future] delete site by id'
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: DELETE
+          uri: /api/site/52
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: '[future] delete site by id'
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/site/:
+    get:
+      description: 'TODO: Add Description'
+      summary: '[future] get sites'
+      tags:
+      - site
+      operationId: '[future] get sites'
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/site/
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: '[future] get sites'
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/team/:
+    get:
+      description: 'TODO: Add Description'
+      summary: '[future] get all teams'
+      tags:
+      - teams
+      operationId: '[future] get all teams'
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/team/
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: '[future] get all teams'
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    post:
+      description: 'TODO: Add Description'
+      summary: create a team
+      tags:
+      - teams
+      operationId: create a team
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateATeamrequest'
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /api/team/
+          headers:
+            Content-Type: application/json
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+          body: >-
+            {
+            	"userID": 10001,
+            	"name":"testTeamToBeDeleted",
+            	"description": "A team that will be used to see if delete REST endpoint works.",
+            	"personal": false,
+            	"orgID":75
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: create a team
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/team/42:
+    get:
+      description: 'TODO: Add Description'
+      summary: get team by Id
+      tags:
+      - teams
+      operationId: get team by Id
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/team/42
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get team by Id
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/team/42/devices:
+    get:
+      description: 'TODO: Add Description'
+      summary: get devices admined by a team
+      tags:
+      - teams
+      operationId: get devices admined by a team
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/team/42/devices
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get devices admined by a team
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/team/42/groups:
+    get:
+      description: 'TODO: Add Description'
+      summary: get groups/zones admined by a team
+      tags:
+      - teams
+      operationId: get groups/zones admined by a team
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/team/42/groups
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get groups/zones admined by a team
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/team/42/sites:
+    get:
+      description: 'TODO: Add Description'
+      summary: get sites admined by team
+      tags:
+      - teams
+      operationId: get sites admined by team
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/team/42/sites
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get sites admined by team
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/team/search:
+    post:
+      description: 'TODO: Add Description'
+      summary: team search
+      tags:
+      - teams
+      operationId: team search
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/TeamSearchrequest'
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /api/team/search
+          headers:
+            Content-Type: application/json
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+          body: >-
+            {
+            	"search":{"personal":true}
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: team search
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/team/<teamID>/teamMembers:
+    put:
+      description: 'TODO: Add Description'
+      summary: update user role for team
+      tags:
+      - teams
+      operationId: update user role for team
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: PUT
+          uri: /api/team/<teamID>/teamMembers
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: update user role for team
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    post:
+      description: 'TODO: Add Description'
+      summary: invite member to team
+      tags:
+      - teams
+      operationId: invite member to team
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /api/team/<teamID>/teamMembers
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: invite member to team
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/team/48:
+    delete:
+      description: 'TODO: Add Description'
+      summary: '[future] delete a team'
+      tags:
+      - teams
+      operationId: '[future] delete a team'
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: DELETE
+          uri: /api/team/48
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: '[future] delete a team'
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/user:
+    post:
+      description: 'TODO: Add Description'
+      summary: create new user
+      tags:
+      - user
+      operationId: create new user
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateNewUserrequest'
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /api/user
+          headers:
+            Content-Type: application/json
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+          body: >-
+            {"username": "chris@home.com",
+
+            "password" : "password"
+
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: create new user
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/user/584a1485cb3015983d4f0b16:
+    delete:
+      description: 'TODO: Add Description'
+      summary: delete user by id
+      tags:
+      - user
+      operationId: delete user by id
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: DELETE
+          uri: /api/user/584a1485cb3015983d4f0b16
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: delete user by id
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/user/<userID>:
+    get:
+      description: 'TODO: Add Description'
+      summary: get user by id
+      tags:
+      - user
+      operationId: get user by id
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/user/<userID>
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get user by id
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    put:
+      description: 'TODO: Add Description'
+      summary: update user
+      tags:
+      - user
+      operationId: update user
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: PUT
+          uri: /api/user/<userID>
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: update user
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/user/10001/groups:
+    get:
+      description: 'TODO: Add Description'
+      summary: get user groups
+      tags:
+      - user
+      operationId: get user groups
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/user/10001/groups
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get user groups
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/user/10001/teams:
+    get:
+      description: 'TODO: Add Description'
+      summary: get user teams
+      tags:
+      - user
+      operationId: get user teams
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/user/10001/teams
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get user teams
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/user/10001/sites:
+    get:
+      description: 'TODO: Add Description'
+      summary: get user's site
+      tags:
+      - user
+      operationId: get user's site
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/user/10001/sites
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get user's site
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/user/10001/organizations:
+    get:
+      description: 'TODO: Add Description'
+      summary: get user's org
+      tags:
+      - user
+      operationId: get user's org
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/user/10001/organizations
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get user's org
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/user/10001/devices:
+    get:
+      description: 'TODO: Add Description'
+      summary: get user devices
+      tags:
+      - user
+      operationId: get user devices
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/user/10001/devices
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get user devices
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/user/<userID>/updatePassword:
+    put:
+      description: 'TODO: Add Description'
+      summary: update user password
+      tags:
+      - user
+      operationId: update user password
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: PUT
+          uri: /api/user/<userID>/updatePassword
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: update user password
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/user/search:
+    post:
+      description: 'TODO: Add Description'
+      summary: user search
+      tags:
+      - user
+      operationId: user search
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/UserSearchrequest'
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /api/user/search
+          headers:
+            Content-Type: application/json
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+          body: >-
+            {
+            	"search":{"firstName":"chris"}
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: user search
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/user/:
+    get:
+      description: 'TODO: Add Description'
+      summary: '[archive] get users'
+      tags:
+      - user
+      operationId: '[archive] get users'
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/user/
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMjcyNDgxNiwiZXhwIjoxNTAyNzY4MDE2fQ.R4rFNqVJzgRGcHnkqjTtaXm28T9SPRIfKzRyeteiYDo
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: '[archive] get users'
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /version:
+    get:
+      description: 'TODO: Add Description'
+      summary: version
+      tags:
+      - Misc
+      operationId: version
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /version
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: version
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+definitions:
+  LoginRequest:
+    title: loginRequest
+    example:
+      username: jeb@unomicedge.com
+      password: unomicIs#1
+    type: object
+    properties:
+      username:
+        description: ''
+        type: string
+      password:
+        description: ''
+        type: string
+    required:
+    - username
+    - password
+  AddVnetScoperequest:
+    title: add vnet scopeRequest
+    example:
+      vnet:
+      - localhost_switch
+    type: object
+    properties:
+      vnet:
+        description: ''
+        type: array
+        items:
+          type: string
+    required:
+    - vnet
+  CreateNewCopaConnectorrequest:
+    title: create new Copa ConnectorRequest
+    example:
+      controllerInfo:
+        CONTROLLER_IP: 172.20.0.5
+        CONTROLLER_PASSWORD: admin
+        CONTROLLER_USERNAME: Administrator
+        CONTROLLER_PORT: 8080
+        _id: local_computer
+    type: object
+    properties:
+      controllerInfo:
+        $ref: '#/definitions/ControllerInfo'
+    required:
+    - controllerInfo
+  ControllerInfo:
+    title: ControllerInfo
+    type: object
+    properties:
+      CONTROLLER_IP:
+        description: ''
+        type: string
+      CONTROLLER_PASSWORD:
+        description: ''
+        type: string
+      CONTROLLER_USERNAME:
+        description: ''
+        type: string
+      CONTROLLER_PORT:
+        description: ''
+        type: string
+      _id:
+        description: ''
+        type: string
+    required:
+    - CONTROLLER_IP
+    - CONTROLLER_PASSWORD
+    - CONTROLLER_USERNAME
+    - CONTROLLER_PORT
+    - _id
+  PreregisterByMacrequest:
+    title: preregister by macRequest
+    example:
+      macAddress: B8:27:EB:37:95:33
+    type: object
+    properties:
+      macAddress:
+        description: ''
+        type: string
+    required:
+    - macAddress
+  UpdateDeviceByIdrequest:
+    title: update device by idRequest
+    example:
+      id: 1
+      name: raspberry pi
+      deviceType: laptop
+      activeGroupID: 1
+    type: object
+    properties:
+      id:
+        description: ''
+        type: integer
+        format: int32
+      name:
+        description: ''
+        type: string
+      deviceType:
+        description: ''
+        type: string
+      activeGroupID:
+        description: ''
+        type: integer
+        format: int32
+    required:
+    - id
+    - name
+    - deviceType
+    - activeGroupID
+  CreateNewGrouprequest:
+    title: create new groupRequest
+    example:
+      name: test group 2
+    type: object
+    properties:
+      name:
+        description: ''
+        type: string
+    required:
+    - name
+  InviteNewMemberrequest:
+    title: invite new memberRequest
+    example:
+      username: throw@away.com
+      password: password
+      role: member
+    type: object
+    properties:
+      username:
+        description: ''
+        type: string
+      password:
+        description: ''
+        type: string
+      role:
+        description: ''
+        type: string
+    required:
+    - username
+    - password
+    - role
+  CreateNewOrgrequest:
+    title: create new orgRequest
+    example:
+      name: test Org
+      orgAdminID: 10001
+      email: emailme@me.com
+      phone: 1234567890
+      location:
+        city: my city
+        zip: 12345
+        state: CA
+        country: US
+    type: object
+    properties:
+      name:
+        description: ''
+        type: string
+      orgAdminID:
+        description: ''
+        type: integer
+        format: int32
+      email:
+        description: ''
+        type: string
+      phone:
+        description: ''
+        type: string
+      location:
+        $ref: '#/definitions/Location'
+    required:
+    - name
+    - orgAdminID
+    - email
+    - phone
+    - location
+  Location:
+    title: Location
+    type: object
+    properties:
+      city:
+        description: ''
+        type: string
+      zip:
+        description: ''
+        type: string
+      state:
+        description: ''
+        type: string
+      country:
+        description: ''
+        type: string
+    required:
+    - city
+    - zip
+    - state
+    - country
+  CreateNewSiterequest:
+    title: create new siteRequest
+    type: object
+    properties:
+      siteName:
+        description: ''
+        type: string
+      teamID:
+        description: ''
+        type: integer
+        format: int32
+      orgID:
+        description: ''
+        type: integer
+        format: int32
+      createController:
+        description: ''
+        type: boolean
+      location:
+        $ref: '#/definitions/Location11'
+    required:
+    - siteName
+    - teamID
+    - orgID
+    - createController
+    - location
+  Location11:
+    title: Location11
+    type: object
+    properties:
+      addressLine1:
+        description: ''
+        type: string
+      addressLine2:
+        description: ''
+        type: string
+      city:
+        description: ''
+        type: string
+      zip:
+        description: ''
+        type: string
+      state:
+        description: ''
+        type: string
+      country:
+        description: ''
+        type: string
+    required:
+    - addressLine1
+    - addressLine2
+    - city
+    - zip
+    - state
+    - country
+  ChangeControllerrequest:
+    title: Change ControllerRequest
+    example:
+      controllerID: H10LfLY7b
+    type: object
+    properties:
+      controllerID:
+        description: ''
+        type: string
+    required:
+    - controllerID
+  AddSiteSwitchrequest:
+    title: add site switchRequest
+    example:
+      switchConfig:
+        name: test switch
+        dpid: test dpid
+        macAddress: 11:22:33:44:55:66
+        ipAddress: 1.2.3.4
+        gatewayIp: 11.12.13.14
+        gatewayMac: 01.02.03.04.05.06
+        unmanagedPorts: []
+        managedPorts: []
+    type: object
+    properties:
+      switchConfig:
+        $ref: '#/definitions/SwitchConfig'
+    required:
+    - switchConfig
+  SwitchConfig:
+    title: SwitchConfig
+    type: object
+    properties:
+      name:
+        description: ''
+        type: string
+      dpid:
+        description: ''
+        type: string
+      macAddress:
+        description: ''
+        type: string
+      ipAddress:
+        description: ''
+        type: string
+      gatewayIp:
+        description: ''
+        type: string
+      gatewayMac:
+        description: ''
+        type: string
+      unmanagedPorts:
+        description: ''
+        type: array
+        items:
+          type: string
+      managedPorts:
+        description: ''
+        type: array
+        items:
+          type: string
+    required:
+    - name
+    - dpid
+    - macAddress
+    - ipAddress
+    - gatewayIp
+    - gatewayMac
+    - unmanagedPorts
+    - managedPorts
+  UpdateSiteSwitchrequest:
+    title: update site switchRequest
+    example:
+      switchConfig:
+        name: test switch
+        dpid: test dpid
+        macAddress: 11:22:33:44:55:66
+        ipAddress: 1.2.3.4
+        gatewayIp: 11.12.13.14
+        gatewayMac: 01.02.03.04.05.06
+        unmanagedPorts: []
+        managedPorts: []
+    type: object
+    properties:
+      switchConfig:
+        $ref: '#/definitions/SwitchConfig'
+    required:
+    - switchConfig
+  CreateATeamrequest:
+    title: create a teamRequest
+    example:
+      userID: 10001
+      name: testTeamToBeDeleted
+      description: A team that will be used to see if delete REST endpoint works.
+      personal: false
+      orgID: 75
+    type: object
+    properties:
+      userID:
+        description: ''
+        type: integer
+        format: int32
+      name:
+        description: ''
+        type: string
+      description:
+        description: ''
+        type: string
+      personal:
+        description: ''
+        type: boolean
+      orgID:
+        description: ''
+        type: integer
+        format: int32
+    required:
+    - userID
+    - name
+    - description
+    - personal
+    - orgID
+  TeamSearchrequest:
+    title: team searchRequest
+    example:
+      search:
+        personal: true
+    type: object
+    properties:
+      search:
+        $ref: '#/definitions/Search'
+    required:
+    - search
+  Search:
+    title: Search
+    type: object
+    properties:
+      personal:
+        description: ''
+        type: boolean
+    required:
+    - personal
+  CreateNewUserrequest:
+    title: create new userRequest
+    example:
+      username: chris@home.com
+      password: password
+    type: object
+    properties:
+      username:
+        description: ''
+        type: string
+      password:
+        description: ''
+        type: string
+    required:
+    - username
+    - password
+  UserSearchrequest:
+    title: user searchRequest
+    example:
+      search:
+        firstName: chris
+    type: object
+    properties:
+      search:
+        $ref: '#/definitions/Search22'
+    required:
+    - search
+  Search22:
+    title: Search22
+    type: object
+    properties:
+      firstName:
+        description: ''
+        type: string
+    required:
+    - firstName
