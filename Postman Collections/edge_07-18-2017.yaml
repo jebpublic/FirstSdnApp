@@ -566,6 +566,48 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
+  /api/group/70001/team:
+    get:
+      description: 'TODO: Add Description'
+      summary: get team that admins this group
+      tags:
+      - group
+      operationId: get team that admins this group
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /api/group/70001/team
+          headers:
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMzA5MjM5NywiZXhwIjoxNTAzMTM1NTk3fQ.hGn-wcoBFNMH1zbkWreCUABjFIsxdrqQ12OmCp6NuGY
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: get team that admins this group
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
   /api/group/70001/devices:
     get:
       description: 'TODO: Add Description'
