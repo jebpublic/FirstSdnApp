@@ -107,7 +107,7 @@ paths:
           headers:
             Content-Type: application/json
             Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwMzA5MjM5NywiZXhwIjoxNTAzMTM1NTk3fQ.hGn-wcoBFNMH1zbkWreCUABjFIsxdrqQ12OmCp6NuGY
-          body: '{"vnet":["localhost_switch"]}'
+          body: '{"vnet":["localhost_switch","JimJetway_br0","JimJetway_br1"]}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2564,6 +2564,8 @@ definitions:
     example:
       vnet:
       - localhost_switch
+      - JimJetway_br0
+      - JimJetway_br1
     type: object
     properties:
       vnet:
