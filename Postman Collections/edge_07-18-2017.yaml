@@ -106,7 +106,7 @@ paths:
           uri: /api/controller/Skw5s0wTW/scope
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
           body: '{"vnet":["VirtualBoxOvsOnJimsMac2"]}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -160,7 +160,7 @@ paths:
           uri: /api/controller/
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
           body: >-
             {
             	"controllerInfo":{
@@ -223,7 +223,7 @@ paths:
           uri: /api/device/register/macAddress
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
           body: >-
             {
             	"macAddress":"B8:27:EB:37:95:33",
@@ -304,7 +304,7 @@ paths:
           method: GET
           uri: /api/device/<userID>
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -357,7 +357,7 @@ paths:
           uri: /api/device/1
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
           body: >-
             {
               "id": 1,
@@ -405,7 +405,7 @@ paths:
           method: GET
           uri: /api/group
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -457,7 +457,7 @@ paths:
           uri: /api/group
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
           body: >-
             {
              "name":"test zone for team 42",
@@ -502,7 +502,7 @@ paths:
           method: DELETE
           uri: /api/group
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -543,7 +543,7 @@ paths:
           method: GET
           uri: /api/group/70001
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -584,7 +584,7 @@ paths:
           method: GET
           uri: /api/group/70001/team
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -625,7 +625,7 @@ paths:
           method: GET
           uri: /api/group/70001/devices
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -666,7 +666,7 @@ paths:
           method: GET
           uri: /api/group/<groupID>/score
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -707,7 +707,7 @@ paths:
           method: GET
           uri: /api/group/150/policy
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -760,7 +760,7 @@ paths:
           uri: /api/group/151/inviteMember
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
           body: >-
             {
                 "userID": "michael@unomicedge.com"
@@ -805,7 +805,7 @@ paths:
           method: GET
           uri: /api/user/<userID>/registeredDevices
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -858,7 +858,7 @@ paths:
           uri: /api/organization
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
           body: "{\n	\"name\":\"test Org\",\n	\"orgAdminID\":10001,\n	\"email\":\"emailme@me.com\",\n	\"phone\":\"1234567890\",\n	\"location\":{\n		\"city\":\"my city\", \n	\"zip\":\"12345\",\n	\"state\":\"CA\",\n	\"country\":\"US\"\n	}\n}"
         expectedResponse:
           x-allowExtraHeaders: true
@@ -900,7 +900,7 @@ paths:
           method: GET
           uri: /api/organization/79
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -940,7 +940,7 @@ paths:
           method: DELETE
           uri: /api/organization/79
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -981,7 +981,7 @@ paths:
           method: GET
           uri: /api/organization/79/teams
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1022,7 +1022,7 @@ paths:
           method: GET
           uri: /api/organization/79/sites
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1068,7 +1068,7 @@ paths:
           method: POST
           uri: /api/organization/<orgID>/orgMembers
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
             Content-Type: application/json
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1146,7 +1146,7 @@ paths:
           method: GET
           uri: /api/site/<siteID>
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1187,7 +1187,7 @@ paths:
           method: GET
           uri: /api/site/<siteID>/switches
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1239,7 +1239,7 @@ paths:
           uri: /api/site/<siteID>/switches
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
           body: >-
             {"switchConfig":{
             	"name": "test switch",
@@ -1303,7 +1303,7 @@ paths:
           uri: /api/site/92/controller
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
           body: '{"controllerID":"Skw5s0wTW"}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1357,7 +1357,7 @@ paths:
           uri: /api/site/31/switches
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
           body: >-
             {"switchConfig":{
             	"name": "test switch",
@@ -1409,7 +1409,7 @@ paths:
           method: DELETE
           uri: /api/site/52
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1450,7 +1450,7 @@ paths:
           method: GET
           uri: /api/site/
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1491,7 +1491,7 @@ paths:
           method: GET
           uri: /api/team/
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1543,7 +1543,7 @@ paths:
           uri: /api/team/
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
           body: >-
             {
             	"userID": 10001,
@@ -1592,7 +1592,7 @@ paths:
           method: GET
           uri: /api/team/42
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1633,7 +1633,7 @@ paths:
           method: GET
           uri: /api/team/42/devices
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1674,7 +1674,7 @@ paths:
           method: GET
           uri: /api/team/42/groups
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1715,7 +1715,7 @@ paths:
           method: GET
           uri: /api/team/42/sites
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1768,7 +1768,7 @@ paths:
           uri: /api/team/search
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
           body: >-
             {
             	"search":{"personal":true}
@@ -1818,7 +1818,7 @@ paths:
           method: PUT
           uri: /api/team/<teamID>/teamMembers
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
             Content-Type: application/json
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1864,7 +1864,7 @@ paths:
           method: POST
           uri: /api/team/<teamID>/teamMembers
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
             Content-Type: application/json
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1911,7 +1911,7 @@ paths:
           method: DELETE
           uri: /api/team/48
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
             Content-Type: application/json
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1965,7 +1965,7 @@ paths:
           uri: /api/user
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
           body: >-
             {"username": "chris@home.com",
 
@@ -2012,7 +2012,7 @@ paths:
           method: DELETE
           uri: /api/user/584a1485cb3015983d4f0b16
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2053,7 +2053,7 @@ paths:
           method: GET
           uri: /api/user/10001
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2094,7 +2094,7 @@ paths:
           method: GET
           uri: /api/user/10001/groups
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2135,7 +2135,7 @@ paths:
           method: GET
           uri: /api/user/10001/teams
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2176,7 +2176,7 @@ paths:
           method: GET
           uri: /api/user/10001/sites
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2217,7 +2217,7 @@ paths:
           method: GET
           uri: /api/user/10001/organizations
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2258,7 +2258,7 @@ paths:
           method: GET
           uri: /api/user/10001/devices
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2304,7 +2304,7 @@ paths:
           method: PUT
           uri: /api/user/<userID>/updatePassword
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
             Content-Type: application/json
         expectedResponse:
           x-allowExtraHeaders: true
@@ -2346,7 +2346,7 @@ paths:
           method: PUT
           uri: /api/user/<userID>
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2399,7 +2399,7 @@ paths:
           uri: /api/user/search
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
           body: >-
             {
             	"search":{"firstName":"chris"}
@@ -2444,7 +2444,7 @@ paths:
           method: GET
           uri: /api/user/
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2485,7 +2485,7 @@ paths:
           method: GET
           uri: /api/ruleTemplate/class/types
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODUzMjI1NiwiZXhwIjoxNTA4NTc1NDU2fQ.R-uY8BwncMKjn6gdLvUhky3tX_5KvyHP3GpYqtEGhJs
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUwODcwMzI1MSwiZXhwIjoxNTA4NzQ2NDUxfQ.lPjj0-lrJW9AVKxD3OBYSvn8w64tZ3YPd39u5cITWzw
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
