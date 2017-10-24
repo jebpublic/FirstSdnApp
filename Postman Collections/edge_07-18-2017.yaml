@@ -2753,6 +2753,18 @@ definitions:
     - country
   CreateNewSiterequest:
     title: create new siteRequest
+    example:
+      siteName: the test1 -delme
+      teamID: 42
+      orgID: 75
+      createController: false
+      location:
+        addressLine1: 1230 alive drive
+        addressLine2: null
+        city: my city
+        zip: 12345
+        state: CA
+        country: US
     type: object
     properties:
       siteName:
