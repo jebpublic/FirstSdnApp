@@ -23,7 +23,7 @@ produces:
 paths:
   /auth/login:
     post:
-      description: 'TODO: Add Description'
+      description: ''
       summary: login
       tags:
       - auth
@@ -63,7 +63,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: login
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -71,7 +71,7 @@ paths:
         IsMultiContentStreaming: false
   /api/controller/Skw5s0wTW/scope:
     put:
-      description: 'TODO: Add Description'
+      description: ''
       summary: add vnet scope
       tags:
       - controller
@@ -118,7 +118,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: add vnet scope
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -126,7 +126,7 @@ paths:
         IsMultiContentStreaming: false
   /api/controller/:
     post:
-      description: 'TODO: Add Description'
+      description: ''
       summary: create new Copa Connector
       tags:
       - controller
@@ -181,7 +181,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: create new Copa Connector
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -189,7 +189,7 @@ paths:
         IsMultiContentStreaming: false
   /api/device/register/macAddress:
     post:
-      description: 'TODO: Add Description'
+      description: ''
       summary: preregister by mac
       tags:
       - device
@@ -240,7 +240,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: preregister by mac
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -248,7 +248,7 @@ paths:
         IsMultiContentStreaming: false
   /api/device/<deviceID>:
     delete:
-      description: 'TODO: Add Description'
+      description: ''
       summary: delete device
       tags:
       - device
@@ -274,7 +274,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: delete device
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -282,7 +282,7 @@ paths:
         IsMultiContentStreaming: false
   /api/device/<userID>:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get device by id
       tags:
       - device
@@ -315,7 +315,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get device by id
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -323,7 +323,7 @@ paths:
         IsMultiContentStreaming: false
   /api/device/1:
     put:
-      description: 'TODO: Add Description'
+      description: ''
       summary: update device by id
       tags:
       - device
@@ -375,7 +375,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: update device by id
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -383,7 +383,7 @@ paths:
         IsMultiContentStreaming: false
   /api/group:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: '[future] get groups'
       tags:
       - group
@@ -416,14 +416,14 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: '[future] get groups'
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     post:
-      description: 'TODO: Add Description'
+      description: ''
       summary: create new group
       tags:
       - group
@@ -473,14 +473,14 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: create new group
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     delete:
-      description: 'TODO: Add Description'
+      description: ''
       summary: delete group
       tags:
       - group
@@ -513,7 +513,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: delete group
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -521,7 +521,7 @@ paths:
         IsMultiContentStreaming: false
   /api/group/70001:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get group by id
       tags:
       - group
@@ -554,7 +554,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get group by id
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -562,7 +562,7 @@ paths:
         IsMultiContentStreaming: false
   /api/group/70001/team:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get team that admins this group
       tags:
       - group
@@ -595,7 +595,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get team that admins this group
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -603,7 +603,7 @@ paths:
         IsMultiContentStreaming: false
   /api/group/70001/devices:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get devices in a group
       tags:
       - group
@@ -636,7 +636,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get devices in a group
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -644,7 +644,7 @@ paths:
         IsMultiContentStreaming: false
   /api/group/<groupID>/score:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: group score
       tags:
       - group
@@ -677,7 +677,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: group score
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -685,7 +685,7 @@ paths:
         IsMultiContentStreaming: false
   /api/group/150/policy:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get policy
       tags:
       - policy
@@ -718,7 +718,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get policy
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -726,7 +726,7 @@ paths:
         IsMultiContentStreaming: false
   /api/group/151/inviteMember:
     post:
-      description: 'TODO: Add Description'
+      description: ''
       summary: Delete a member from the group
       tags:
       - group
@@ -775,7 +775,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Delete a member from the group
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -783,7 +783,7 @@ paths:
         IsMultiContentStreaming: false
   /api/user/<userID>/registeredDevices:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: '[archive] get user registered devices'
       tags:
       - group
@@ -816,7 +816,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: '[archive] get user registered devices'
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -824,7 +824,7 @@ paths:
         IsMultiContentStreaming: false
   /api/organization:
     post:
-      description: 'TODO: Add Description'
+      description: ''
       summary: create new org
       tags:
       - organization
@@ -870,7 +870,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: create new org
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -878,7 +878,7 @@ paths:
         IsMultiContentStreaming: false
   /api/organization/79:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get org by ID
       tags:
       - organization
@@ -911,14 +911,14 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get org by ID
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     delete:
-      description: 'TODO: Add Description'
+      description: ''
       summary: '[future] get org by ID'
       tags:
       - organization
@@ -951,7 +951,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: '[future] get org by ID'
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -959,7 +959,7 @@ paths:
         IsMultiContentStreaming: false
   /api/organization/79/teams:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get org owned teams
       tags:
       - organization
@@ -992,7 +992,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get org owned teams
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1000,7 +1000,7 @@ paths:
         IsMultiContentStreaming: false
   /api/organization/79/sites:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get org owned sites
       tags:
       - organization
@@ -1033,7 +1033,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get org owned sites
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1041,7 +1041,7 @@ paths:
         IsMultiContentStreaming: false
   /api/organization/<orgID>/orgMembers:
     post:
-      description: 'TODO: Add Description'
+      description: ''
       summary: invite member to org
       tags:
       - organization
@@ -1080,7 +1080,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: invite member to org
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1088,7 +1088,7 @@ paths:
         IsMultiContentStreaming: false
   /api/site:
     post:
-      description: 'TODO: Add Description'
+      description: ''
       summary: create new site
       tags:
       - site
@@ -1134,7 +1134,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: create new site
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1142,7 +1142,7 @@ paths:
         IsMultiContentStreaming: false
   /api/site/<siteID>:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get site by id
       tags:
       - site
@@ -1175,7 +1175,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get site by id
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1183,7 +1183,7 @@ paths:
         IsMultiContentStreaming: false
   /api/site/<siteID>/switches:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get site switches
       tags:
       - site
@@ -1216,14 +1216,14 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get site switches
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     post:
-      description: 'TODO: Add Description'
+      description: ''
       summary: add site switch
       tags:
       - site
@@ -1279,7 +1279,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: add site switch
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1287,7 +1287,7 @@ paths:
         IsMultiContentStreaming: false
   /api/site/105/controller:
     put:
-      description: 'TODO: Add Description'
+      description: ''
       summary: Change Controller
       tags:
       - site
@@ -1333,7 +1333,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: Change Controller
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1341,7 +1341,7 @@ paths:
         IsMultiContentStreaming: false
   /api/site/31/switches:
     put:
-      description: 'TODO: Add Description'
+      description: ''
       summary: update site switch
       tags:
       - site
@@ -1397,7 +1397,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: update site switch
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1405,7 +1405,7 @@ paths:
         IsMultiContentStreaming: false
   /api/site/52:
     delete:
-      description: 'TODO: Add Description'
+      description: ''
       summary: '[future] delete site by id'
       tags:
       - site
@@ -1438,7 +1438,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: '[future] delete site by id'
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1446,7 +1446,7 @@ paths:
         IsMultiContentStreaming: false
   /api/site/:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: '[future] get sites'
       tags:
       - site
@@ -1479,7 +1479,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: '[future] get sites'
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1487,7 +1487,7 @@ paths:
         IsMultiContentStreaming: false
   /api/team/:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: '[future] get all teams'
       tags:
       - teams
@@ -1520,14 +1520,14 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: '[future] get all teams'
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     post:
-      description: 'TODO: Add Description'
+      description: ''
       summary: create a team
       tags:
       - teams
@@ -1580,7 +1580,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: create a team
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1588,7 +1588,7 @@ paths:
         IsMultiContentStreaming: false
   /api/team/42:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get team by Id
       tags:
       - teams
@@ -1621,7 +1621,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get team by Id
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1629,7 +1629,7 @@ paths:
         IsMultiContentStreaming: false
   /api/team/42/devices:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get devices admined by a team
       tags:
       - teams
@@ -1662,7 +1662,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get devices admined by a team
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1670,7 +1670,7 @@ paths:
         IsMultiContentStreaming: false
   /api/team/42/groups:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get groups/zones admined by a team
       tags:
       - teams
@@ -1703,7 +1703,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get groups/zones admined by a team
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1711,7 +1711,7 @@ paths:
         IsMultiContentStreaming: false
   /api/team/42/sites:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get sites admined by team
       tags:
       - teams
@@ -1744,7 +1744,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get sites admined by team
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1752,7 +1752,7 @@ paths:
         IsMultiContentStreaming: false
   /api/team/search:
     post:
-      description: 'TODO: Add Description'
+      description: ''
       summary: team search
       tags:
       - teams
@@ -1801,7 +1801,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: team search
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1809,7 +1809,7 @@ paths:
         IsMultiContentStreaming: false
   /api/team/<teamID>/teamMembers:
     put:
-      description: 'TODO: Add Description'
+      description: ''
       summary: update user role for team
       tags:
       - teams
@@ -1848,14 +1848,14 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: update user role for team
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
     post:
-      description: 'TODO: Add Description'
+      description: ''
       summary: invite member to team
       tags:
       - teams
@@ -1894,7 +1894,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: invite member to team
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1902,7 +1902,7 @@ paths:
         IsMultiContentStreaming: false
   /api/team/48:
     delete:
-      description: 'TODO: Add Description'
+      description: ''
       summary: '[future] delete a team'
       tags:
       - teams
@@ -1941,7 +1941,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: '[future] delete a team'
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -1949,7 +1949,7 @@ paths:
         IsMultiContentStreaming: false
   /api/user:
     post:
-      description: 'TODO: Add Description'
+      description: ''
       summary: create new user
       tags:
       - user
@@ -2000,7 +2000,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: create new user
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2008,7 +2008,7 @@ paths:
         IsMultiContentStreaming: false
   /api/user/584a1485cb3015983d4f0b16:
     delete:
-      description: 'TODO: Add Description'
+      description: ''
       summary: delete user by id
       tags:
       - user
@@ -2041,7 +2041,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: delete user by id
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2049,7 +2049,7 @@ paths:
         IsMultiContentStreaming: false
   /api/user/10001:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get user by id
       tags:
       - user
@@ -2082,7 +2082,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get user by id
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2090,7 +2090,7 @@ paths:
         IsMultiContentStreaming: false
   /api/user/10001/groups:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get user groups
       tags:
       - user
@@ -2123,7 +2123,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get user groups
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2131,7 +2131,7 @@ paths:
         IsMultiContentStreaming: false
   /api/user/10001/teams:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get user teams
       tags:
       - user
@@ -2164,7 +2164,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get user teams
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2172,7 +2172,7 @@ paths:
         IsMultiContentStreaming: false
   /api/user/10001/sites:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get user's site
       tags:
       - user
@@ -2205,7 +2205,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get user's site
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2213,7 +2213,7 @@ paths:
         IsMultiContentStreaming: false
   /api/user/10001/organizations:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get user's org
       tags:
       - user
@@ -2246,7 +2246,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get user's org
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2254,7 +2254,7 @@ paths:
         IsMultiContentStreaming: false
   /api/user/10001/devices:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get user devices
       tags:
       - user
@@ -2287,7 +2287,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get user devices
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2295,7 +2295,7 @@ paths:
         IsMultiContentStreaming: false
   /api/user/<userID>/updatePassword:
     put:
-      description: 'TODO: Add Description'
+      description: ''
       summary: update user password
       tags:
       - user
@@ -2334,7 +2334,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: update user password
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2342,7 +2342,7 @@ paths:
         IsMultiContentStreaming: false
   /api/user/<userID>:
     put:
-      description: 'TODO: Add Description'
+      description: ''
       summary: update user
       tags:
       - user
@@ -2375,7 +2375,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: update user
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2383,7 +2383,7 @@ paths:
         IsMultiContentStreaming: false
   /api/user/search:
     post:
-      description: 'TODO: Add Description'
+      description: ''
       summary: user search
       tags:
       - user
@@ -2432,7 +2432,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: user search
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2440,7 +2440,7 @@ paths:
         IsMultiContentStreaming: false
   /api/user/:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: '[archive] get users'
       tags:
       - user
@@ -2473,7 +2473,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: '[archive] get users'
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2481,7 +2481,7 @@ paths:
         IsMultiContentStreaming: false
   /api/ruleTemplate/class/types:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: get rule template classes
       tags:
       - policy
@@ -2514,7 +2514,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: get rule template classes
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2522,7 +2522,7 @@ paths:
         IsMultiContentStreaming: false
   /version:
     get:
-      description: 'TODO: Add Description'
+      description: ''
       summary: version
       tags:
       - Misc
@@ -2548,7 +2548,7 @@ paths:
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: version
-        x-testDescription: 'TODO: Add Description'
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
