@@ -14,6 +14,7 @@ securityDefinitions:
     flow: implicit
     authorizationUrl: http://dev-edge-backend.unomiclabs.com:3002
     scopes: {}
+    x-skip-client-authentication: false
 schemes:
 - http
 consumes:
