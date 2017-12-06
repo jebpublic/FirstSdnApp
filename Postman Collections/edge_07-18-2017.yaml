@@ -28,7 +28,7 @@ paths:
       summary: login
       tags:
       - auth
-      operationId: login
+      operationId: AuthLoginPost
       produces:
       - application/json
       parameters:
@@ -76,7 +76,7 @@ paths:
       summary: add vnet scope
       tags:
       - controller
-      operationId: add vnet scope
+      operationId: ApiControllerSkw5s0wTWScopePut
       produces:
       - application/json
       parameters:
@@ -131,7 +131,7 @@ paths:
       summary: create new Copa Connector
       tags:
       - controller
-      operationId: create new Copa Connector
+      operationId: ApiControllerPost
       produces:
       - application/json
       parameters:
@@ -194,7 +194,7 @@ paths:
       summary: preregister by mac
       tags:
       - device
-      operationId: preregister by mac
+      operationId: ApiDeviceRegisterMacAddressPost
       produces:
       - application/json
       parameters:
@@ -253,7 +253,7 @@ paths:
       summary: delete device
       tags:
       - device
-      operationId: delete device
+      operationId: ApiDeviceDeviceIDDelete
       produces:
       - application/json
       parameters: []
@@ -287,7 +287,7 @@ paths:
       summary: get device by id
       tags:
       - device
-      operationId: get device by id
+      operationId: ApiDeviceUserIDGet
       produces:
       - application/json
       parameters:
@@ -328,7 +328,7 @@ paths:
       summary: update device by id
       tags:
       - device
-      operationId: update device by id
+      operationId: ApiDevice1Put
       produces:
       - application/json
       parameters:
@@ -388,7 +388,7 @@ paths:
       summary: '[future] get groups'
       tags:
       - group
-      operationId: '[future] get groups'
+      operationId: ApiGroupGet
       produces:
       - application/json
       parameters:
@@ -428,7 +428,7 @@ paths:
       summary: create new group
       tags:
       - group
-      operationId: create new group
+      operationId: ApiGroupPost
       produces:
       - application/json
       parameters:
@@ -485,7 +485,7 @@ paths:
       summary: delete group
       tags:
       - group
-      operationId: delete group
+      operationId: ApiGroupDelete
       produces:
       - application/json
       parameters:
@@ -526,7 +526,7 @@ paths:
       summary: get group by id
       tags:
       - group
-      operationId: get group by id
+      operationId: ApiGroup70001Get
       produces:
       - application/json
       parameters:
@@ -567,7 +567,7 @@ paths:
       summary: get team that admins this group
       tags:
       - group
-      operationId: get team that admins this group
+      operationId: ApiGroup70001TeamGet
       produces:
       - application/json
       parameters:
@@ -608,7 +608,7 @@ paths:
       summary: get devices in a group
       tags:
       - group
-      operationId: get devices in a group
+      operationId: ApiGroup70001DevicesGet
       produces:
       - application/json
       parameters:
@@ -649,7 +649,7 @@ paths:
       summary: group score
       tags:
       - group
-      operationId: group score
+      operationId: ApiGroupGroupIDScoreGet
       produces:
       - application/json
       parameters:
@@ -690,7 +690,7 @@ paths:
       summary: get policy
       tags:
       - policy
-      operationId: get policy
+      operationId: ApiGroup150PolicyGet2
       produces:
       - application/json
       parameters:
@@ -731,7 +731,7 @@ paths:
       summary: Delete a member from the group
       tags:
       - group
-      operationId: Delete a member from the group
+      operationId: ApiGroup151InviteMemberPost2
       produces:
       - application/json
       parameters:
@@ -788,7 +788,7 @@ paths:
       summary: '[archive] get user registered devices'
       tags:
       - group
-      operationId: '[archive] get user registered devices'
+      operationId: ApiUserUserIDRegisteredDevicesGet
       produces:
       - application/json
       parameters:
@@ -829,7 +829,7 @@ paths:
       summary: create new org
       tags:
       - organization
-      operationId: create new org
+      operationId: ApiOrganizationPost
       produces:
       - application/json
       parameters:
@@ -883,7 +883,7 @@ paths:
       summary: get org by ID
       tags:
       - organization
-      operationId: get org by ID
+      operationId: ApiOrganization79Get
       produces:
       - application/json
       parameters:
@@ -923,7 +923,7 @@ paths:
       summary: '[future] get org by ID'
       tags:
       - organization
-      operationId: '[future] get org by ID'
+      operationId: ApiOrganization79Delete
       produces:
       - application/json
       parameters:
@@ -964,7 +964,7 @@ paths:
       summary: get org owned teams
       tags:
       - organization
-      operationId: get org owned teams
+      operationId: ApiOrganization79TeamsGet
       produces:
       - application/json
       parameters:
@@ -1005,7 +1005,7 @@ paths:
       summary: get org owned sites
       tags:
       - organization
-      operationId: get org owned sites
+      operationId: ApiOrganization79SitesGet
       produces:
       - application/json
       parameters:
@@ -1046,7 +1046,7 @@ paths:
       summary: invite member to org
       tags:
       - organization
-      operationId: invite member to org
+      operationId: ApiOrganizationOrgIDOrgMembersPost
       produces:
       - application/json
       parameters:
@@ -1093,7 +1093,7 @@ paths:
       summary: create new site
       tags:
       - site
-      operationId: create new site
+      operationId: ApiSitePost
       produces:
       - application/json
       parameters:
@@ -1147,7 +1147,7 @@ paths:
       summary: get site by id
       tags:
       - site
-      operationId: get site by id
+      operationId: ApiSiteSiteIDGet
       produces:
       - application/json
       parameters:
@@ -1188,7 +1188,7 @@ paths:
       summary: get site switches
       tags:
       - site
-      operationId: get site switches
+      operationId: ApiSiteSiteIDSwitchesGet
       produces:
       - application/json
       parameters:
@@ -1228,7 +1228,7 @@ paths:
       summary: add site switch
       tags:
       - site
-      operationId: add site switch
+      operationId: ApiSiteSiteIDSwitchesPost
       produces:
       - application/json
       parameters:
@@ -1292,7 +1292,7 @@ paths:
       summary: Change Controller
       tags:
       - site
-      operationId: Change Controller
+      operationId: ApiSite105ControllerPut
       produces:
       - application/json
       parameters:
@@ -1346,7 +1346,7 @@ paths:
       summary: update site switch
       tags:
       - site
-      operationId: update site switch
+      operationId: ApiSite31SwitchesPut
       produces:
       - application/json
       parameters:
@@ -1410,7 +1410,7 @@ paths:
       summary: '[future] delete site by id'
       tags:
       - site
-      operationId: '[future] delete site by id'
+      operationId: ApiSite52Delete
       produces:
       - application/json
       parameters:
@@ -1451,7 +1451,7 @@ paths:
       summary: '[future] get sites'
       tags:
       - site
-      operationId: '[future] get sites'
+      operationId: ApiSiteGet
       produces:
       - application/json
       parameters:
@@ -1492,7 +1492,7 @@ paths:
       summary: '[future] get all teams'
       tags:
       - teams
-      operationId: '[future] get all teams'
+      operationId: ApiTeamGet
       produces:
       - application/json
       parameters:
@@ -1532,7 +1532,7 @@ paths:
       summary: create a team
       tags:
       - teams
-      operationId: create a team
+      operationId: ApiTeamPost
       produces:
       - application/json
       parameters:
@@ -1593,7 +1593,7 @@ paths:
       summary: get team by Id
       tags:
       - teams
-      operationId: get team by Id
+      operationId: ApiTeam42Get
       produces:
       - application/json
       parameters:
@@ -1634,7 +1634,7 @@ paths:
       summary: get devices admined by a team
       tags:
       - teams
-      operationId: get devices admined by a team
+      operationId: ApiTeam42DevicesGet
       produces:
       - application/json
       parameters:
@@ -1675,7 +1675,7 @@ paths:
       summary: get groups/zones admined by a team
       tags:
       - teams
-      operationId: get groups/zones admined by a team
+      operationId: ApiTeam42GroupsGet
       produces:
       - application/json
       parameters:
@@ -1716,7 +1716,7 @@ paths:
       summary: get sites admined by team
       tags:
       - teams
-      operationId: get sites admined by team
+      operationId: ApiTeam42SitesGet
       produces:
       - application/json
       parameters:
@@ -1757,7 +1757,7 @@ paths:
       summary: team search
       tags:
       - teams
-      operationId: team search
+      operationId: ApiTeamSearchPost
       produces:
       - application/json
       parameters:
@@ -1814,7 +1814,7 @@ paths:
       summary: update user role for team
       tags:
       - teams
-      operationId: update user role for team
+      operationId: ApiTeamTeamIDTeamMembersPut
       produces:
       - application/json
       parameters:
@@ -1860,7 +1860,7 @@ paths:
       summary: invite member to team
       tags:
       - teams
-      operationId: invite member to team
+      operationId: ApiTeamTeamIDTeamMembersPost
       produces:
       - application/json
       parameters:
@@ -1907,7 +1907,7 @@ paths:
       summary: '[future] delete a team'
       tags:
       - teams
-      operationId: '[future] delete a team'
+      operationId: ApiTeam48Delete
       produces:
       - application/json
       parameters:
@@ -1954,7 +1954,7 @@ paths:
       summary: create new user
       tags:
       - user
-      operationId: create new user
+      operationId: ApiUserPost
       produces:
       - application/json
       parameters:
@@ -2013,7 +2013,7 @@ paths:
       summary: delete user by id
       tags:
       - user
-      operationId: delete user by id
+      operationId: ApiUser584a1485cb3015983d4f0b16Delete
       produces:
       - application/json
       parameters:
@@ -2054,7 +2054,7 @@ paths:
       summary: get user by id
       tags:
       - user
-      operationId: get user by id
+      operationId: ApiUser10001Get
       produces:
       - application/json
       parameters:
@@ -2095,7 +2095,7 @@ paths:
       summary: get user groups
       tags:
       - user
-      operationId: get user groups
+      operationId: ApiUser10001GroupsGet
       produces:
       - application/json
       parameters:
@@ -2136,7 +2136,7 @@ paths:
       summary: get user teams
       tags:
       - user
-      operationId: get user teams
+      operationId: ApiUser10001TeamsGet
       produces:
       - application/json
       parameters:
@@ -2177,7 +2177,7 @@ paths:
       summary: get user's site
       tags:
       - user
-      operationId: get user's site
+      operationId: ApiUser10001SitesGet
       produces:
       - application/json
       parameters:
@@ -2218,7 +2218,7 @@ paths:
       summary: get user's org
       tags:
       - user
-      operationId: get user's org
+      operationId: ApiUser10001OrganizationsGet
       produces:
       - application/json
       parameters:
@@ -2259,7 +2259,7 @@ paths:
       summary: get user devices
       tags:
       - user
-      operationId: get user devices
+      operationId: ApiUser10001DevicesGet
       produces:
       - application/json
       parameters:
@@ -2300,7 +2300,7 @@ paths:
       summary: update user password
       tags:
       - user
-      operationId: update user password
+      operationId: ApiUserUserIDUpdatePasswordPut
       produces:
       - application/json
       parameters:
@@ -2347,7 +2347,7 @@ paths:
       summary: update user
       tags:
       - user
-      operationId: update user
+      operationId: ApiUserUserIDPut
       produces:
       - application/json
       parameters:
@@ -2388,7 +2388,7 @@ paths:
       summary: user search
       tags:
       - user
-      operationId: user search
+      operationId: ApiUserSearchPost
       produces:
       - application/json
       parameters:
@@ -2445,7 +2445,7 @@ paths:
       summary: '[archive] get users'
       tags:
       - user
-      operationId: '[archive] get users'
+      operationId: ApiUserGet
       produces:
       - application/json
       parameters:
@@ -2486,7 +2486,7 @@ paths:
       summary: get rule template classes
       tags:
       - policy
-      operationId: get rule template classes
+      operationId: ApiRuleTemplateClassTypesGet
       produces:
       - application/json
       parameters:
@@ -2527,7 +2527,7 @@ paths:
       summary: version
       tags:
       - Misc
-      operationId: version
+      operationId: VersionGet
       produces:
       - application/json
       parameters: []
