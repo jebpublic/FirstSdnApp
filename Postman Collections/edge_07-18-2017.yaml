@@ -2565,9 +2565,11 @@ definitions:
     properties:
       username:
         description: ''
+        example: jeb@unomicedge.com
         type: string
       password:
         description: ''
+        example: unomicIs#1
         type: string
     required:
     - username
@@ -2582,6 +2584,9 @@ definitions:
     properties:
       vnet:
         description: ''
+        example:
+        - VmwareOvsOnTeamViewer
+        - VmwareOvsS2OnTeamViewer
         type: array
         items:
           type: string
@@ -2600,26 +2605,43 @@ definitions:
     properties:
       controllerInfo:
         $ref: '#/definitions/ControllerInfo'
+        example:
+          CONTROLLER_IP: 172.20.0.5
+          CONTROLLER_PASSWORD: admin
+          CONTROLLER_USERNAME: Administrator
+          CONTROLLER_PORT: 8080
+          _id: local_computer
     required:
     - controllerInfo
   ControllerInfo:
     title: ControllerInfo
+    example:
+      CONTROLLER_IP: 172.20.0.5
+      CONTROLLER_PASSWORD: admin
+      CONTROLLER_USERNAME: Administrator
+      CONTROLLER_PORT: 8080
+      _id: local_computer
     type: object
     properties:
       CONTROLLER_IP:
         description: ''
+        example: 172.20.0.5
         type: string
       CONTROLLER_PASSWORD:
         description: ''
+        example: admin
         type: string
       CONTROLLER_USERNAME:
         description: ''
+        example: Administrator
         type: string
       CONTROLLER_PORT:
         description: ''
+        example: 8080
         type: string
       _id:
         description: ''
+        example: local_computer
         type: string
     required:
     - CONTROLLER_IP
@@ -2637,12 +2659,15 @@ definitions:
     properties:
       macAddress:
         description: ''
+        example: 00:0C:29:18:3F:3F
         type: string
       name:
         description: ''
+        example: switch1Devices
         type: string
       deviceType:
         description: ''
+        example: VMWare_VM
         type: string
     required:
     - macAddress
@@ -2659,16 +2684,20 @@ definitions:
     properties:
       id:
         description: ''
+        example: 1
         type: integer
         format: int32
       name:
         description: ''
+        example: raspberry pi
         type: string
       deviceType:
         description: ''
+        example: laptop
         type: string
       activeGroupID:
         description: ''
+        example: 1
         type: integer
         format: int32
     required:
@@ -2685,9 +2714,11 @@ definitions:
     properties:
       name:
         description: ''
+        example: test zone for team 42
         type: string
       teamID:
         description: ''
+        example: 42
         type: string
     required:
     - name
@@ -2700,6 +2731,7 @@ definitions:
     properties:
       userID:
         description: ''
+        example: michael@unomicedge.com
         type: string
     required:
     - userID
@@ -2711,6 +2743,7 @@ definitions:
     properties:
       userID:
         description: ''
+        example: michael@unomicedge.com
         type: string
     required:
     - userID
@@ -2730,19 +2763,28 @@ definitions:
     properties:
       name:
         description: ''
+        example: test Org
         type: string
       orgAdminID:
         description: ''
+        example: 10001
         type: integer
         format: int32
       email:
         description: ''
+        example: emailme@me.com
         type: string
       phone:
         description: ''
+        example: 1234567890
         type: string
       location:
         $ref: '#/definitions/Location'
+        example:
+          city: my city
+          zip: 12345
+          state: CA
+          country: US
     required:
     - name
     - orgAdminID
@@ -2751,19 +2793,28 @@ definitions:
     - location
   Location:
     title: Location
+    example:
+      city: my city
+      zip: 12345
+      state: CA
+      country: US
     type: object
     properties:
       city:
         description: ''
+        example: my city
         type: string
       zip:
         description: ''
+        example: 12345
         type: string
       state:
         description: ''
+        example: CA
         type: string
       country:
         description: ''
+        example: US
         type: string
     required:
     - city
@@ -2788,20 +2839,31 @@ definitions:
     properties:
       siteName:
         description: ''
+        example: the test1 -delme
         type: string
       teamID:
         description: ''
+        example: 42
         type: integer
         format: int32
       orgID:
         description: ''
+        example: 75
         type: integer
         format: int32
       createController:
         description: ''
+        example: false
         type: boolean
       location:
         $ref: '#/definitions/Location12'
+        example:
+          addressLine1: 1230 alive drive
+          addressLine2: null
+          city: my city
+          zip: 12345
+          state: CA
+          country: US
     required:
     - siteName
     - teamID
@@ -2810,25 +2872,37 @@ definitions:
     - location
   Location12:
     title: Location12
+    example:
+      addressLine1: 1230 alive drive
+      addressLine2: null
+      city: my city
+      zip: 12345
+      state: CA
+      country: US
     type: object
     properties:
       addressLine1:
         description: ''
+        example: 1230 alive drive
         type: string
       addressLine2:
         description: ''
         type: string
       city:
         description: ''
+        example: my city
         type: string
       zip:
         description: ''
+        example: 12345
         type: string
       state:
         description: ''
+        example: CA
         type: string
       country:
         description: ''
+        example: US
         type: string
     required:
     - addressLine1
@@ -2845,6 +2919,7 @@ definitions:
     properties:
       controllerID:
         description: ''
+        example: Skw5s0wTW
         type: string
     required:
     - controllerID
@@ -2864,37 +2939,63 @@ definitions:
     properties:
       switchConfig:
         $ref: '#/definitions/SwitchConfig'
+        example:
+          name: test switch
+          dpid: test dpid
+          macAddress: 11:22:33:44:55:66
+          ipAddress: 1.2.3.4
+          gatewayIp: 11.12.13.14
+          gatewayMac: 01.02.03.04.05.06
+          unmanagedPorts: []
+          managedPorts: []
     required:
     - switchConfig
   SwitchConfig:
     title: SwitchConfig
+    example:
+      name: test switch
+      dpid: test dpid
+      macAddress: 11:22:33:44:55:66
+      ipAddress: 1.2.3.4
+      gatewayIp: 11.12.13.14
+      gatewayMac: 01.02.03.04.05.06
+      unmanagedPorts: []
+      managedPorts: []
     type: object
     properties:
       name:
         description: ''
+        example: test switch
         type: string
       dpid:
         description: ''
+        example: test dpid
         type: string
       macAddress:
         description: ''
+        example: 11:22:33:44:55:66
         type: string
       ipAddress:
         description: ''
+        example: 1.2.3.4
         type: string
       gatewayIp:
         description: ''
+        example: 11.12.13.14
         type: string
       gatewayMac:
         description: ''
+        example: 01.02.03.04.05.06
         type: string
       unmanagedPorts:
         description: ''
+        example: []
         type: array
         items:
           type: string
       managedPorts:
         description: ''
+        example: []
         type: array
         items:
           type: string
@@ -2923,6 +3024,15 @@ definitions:
     properties:
       switchConfig:
         $ref: '#/definitions/SwitchConfig'
+        example:
+          name: test switch
+          dpid: test dpid
+          macAddress: 11:22:33:44:55:66
+          ipAddress: 1.2.3.4
+          gatewayIp: 11.12.13.14
+          gatewayMac: 01.02.03.04.05.06
+          unmanagedPorts: []
+          managedPorts: []
     required:
     - switchConfig
   CreateATeamrequest:
@@ -2937,19 +3047,24 @@ definitions:
     properties:
       userID:
         description: ''
+        example: 10001
         type: integer
         format: int32
       name:
         description: ''
+        example: testTeamToBeDeleted
         type: string
       description:
         description: ''
+        example: A team that will be used to see if delete REST endpoint works.
         type: string
       personal:
         description: ''
+        example: false
         type: boolean
       orgID:
         description: ''
+        example: 75
         type: integer
         format: int32
     required:
@@ -2967,14 +3082,19 @@ definitions:
     properties:
       search:
         $ref: '#/definitions/Search'
+        example:
+          personal: true
     required:
     - search
   Search:
     title: Search
+    example:
+      personal: true
     type: object
     properties:
       personal:
         description: ''
+        example: true
         type: boolean
     required:
     - personal
@@ -2987,9 +3107,11 @@ definitions:
     properties:
       username:
         description: ''
+        example: chris@home.com
         type: string
       password:
         description: ''
+        example: password
         type: string
     required:
     - username
@@ -3003,14 +3125,19 @@ definitions:
     properties:
       search:
         $ref: '#/definitions/Search23'
+        example:
+          firstName: chris
     required:
     - search
   Search23:
     title: Search23
+    example:
+      firstName: chris
     type: object
     properties:
       firstName:
         description: ''
+        example: chris
         type: string
     required:
     - firstName
