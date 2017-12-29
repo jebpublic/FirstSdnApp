@@ -2605,12 +2605,6 @@ definitions:
     properties:
       controllerInfo:
         $ref: '#/definitions/ControllerInfo'
-        example:
-          CONTROLLER_IP: 172.20.0.5
-          CONTROLLER_PASSWORD: admin
-          CONTROLLER_USERNAME: Administrator
-          CONTROLLER_PORT: 8080
-          _id: local_computer
     required:
     - controllerInfo
   ControllerInfo:
@@ -2780,11 +2774,6 @@ definitions:
         type: string
       location:
         $ref: '#/definitions/Location'
-        example:
-          city: my city
-          zip: 12345
-          state: CA
-          country: US
     required:
     - name
     - orgAdminID
@@ -2857,13 +2846,6 @@ definitions:
         type: boolean
       location:
         $ref: '#/definitions/Location12'
-        example:
-          addressLine1: 1230 alive drive
-          addressLine2: null
-          city: my city
-          zip: 12345
-          state: CA
-          country: US
     required:
     - siteName
     - teamID
@@ -2939,15 +2921,6 @@ definitions:
     properties:
       switchConfig:
         $ref: '#/definitions/SwitchConfig'
-        example:
-          name: test switch
-          dpid: test dpid
-          macAddress: 11:22:33:44:55:66
-          ipAddress: 1.2.3.4
-          gatewayIp: 11.12.13.14
-          gatewayMac: 01.02.03.04.05.06
-          unmanagedPorts: []
-          managedPorts: []
     required:
     - switchConfig
   SwitchConfig:
@@ -3024,15 +2997,6 @@ definitions:
     properties:
       switchConfig:
         $ref: '#/definitions/SwitchConfig'
-        example:
-          name: test switch
-          dpid: test dpid
-          macAddress: 11:22:33:44:55:66
-          ipAddress: 1.2.3.4
-          gatewayIp: 11.12.13.14
-          gatewayMac: 01.02.03.04.05.06
-          unmanagedPorts: []
-          managedPorts: []
     required:
     - switchConfig
   CreateATeamrequest:
@@ -3082,8 +3046,6 @@ definitions:
     properties:
       search:
         $ref: '#/definitions/Search'
-        example:
-          personal: true
     required:
     - search
   Search:
@@ -3125,8 +3087,6 @@ definitions:
     properties:
       search:
         $ref: '#/definitions/Search23'
-        example:
-          firstName: chris
     required:
     - search
   Search23:
