@@ -1117,25 +1117,7 @@ paths:
         200:
           description: ''
       security: []
-      x-unitTests:
-      - request:
-          method: POST
-          uri: /api/site
-          headers:
-            Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
-          body: '{"siteName":"the test1 -delme","teamID":42,"orgID":75,"createController":false,"location":{"addressLine1":"1230 alive drive","addressLine2":"null","city":"my city","zip":"12345","state":"CA","country":"US"}}'
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: create new site
-        x-testDescription: ''
+      x-unitTests: []
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
