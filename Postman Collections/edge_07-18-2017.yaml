@@ -1117,7 +1117,25 @@ paths:
         200:
           description: ''
       security: []
-      x-unitTests: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /api/site
+          headers:
+            Content-Type: application/json
+            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
+          body: "{\"siteName\": \"the test1 -delme\",\n\"teamID\": 42,\n\"orgID\":75,\n\"createController\":false,\n\"location\":{\n		        \"addressLine1\": \"1230 alive drive\",\n        \"addressLine2\": null,\n		\"city\":\"my city\", \n	\"zip\":\"12345\",\n	\"state\":\"CA\",\n	\"country\":\"US\"\n	}\n}"
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: create new site
+        x-testDescription: ''
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -2801,7 +2819,7 @@ definitions:
       createController: false
       location:
         addressLine1: 1230 alive drive
-        addressLine2: null
+        addressLine2: 
         city: my city
         zip: 12345
         state: CA
@@ -2838,7 +2856,7 @@ definitions:
     title: Location12
     example:
       addressLine1: 1230 alive drive
-      addressLine2: null
+      addressLine2: 
       city: my city
       zip: 12345
       state: CA
@@ -2851,7 +2869,6 @@ definitions:
         type: string
       addressLine2:
         description: ''
-        type: string
       city:
         description: ''
         example: my city
