@@ -3,9 +3,6 @@ info:
   version: '1.0'
   title: edge 07-18-2017
   description: 'TODO: Add Description'
-  license:
-    name: MIT
-    url: http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT
 host: dev-edge-backend.unomiclabs.com:3002
 basePath: /
 securityDefinitions:
