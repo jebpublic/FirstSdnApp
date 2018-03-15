@@ -50,7 +50,7 @@ paths:
           uri: /auth/login
           headers:
             Content-Type: application/json
-          body: "{ \n\"username\":\"jeb@unomicedge.com\",\n\"password\":\"unomicIs#1\"\n}"
+          body: '{"username":"jeb@unomicedge.com","password":"unomicIs#1"}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -159,16 +159,7 @@ paths:
           headers:
             Content-Type: application/json
             Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
-          body: >-
-            {
-            	"controllerInfo":{
-            		"CONTROLLER_IP":"172.20.0.5",
-            		"CONTROLLER_PASSWORD":"admin",
-            		"CONTROLLER_USERNAME":"Administrator",
-            		"CONTROLLER_PORT":"8080",
-            		"_id": "local_computer"
-            	}
-            }
+          body: '{"controllerInfo":{"CONTROLLER_IP":"172.20.0.5","CONTROLLER_PASSWORD":"admin","CONTROLLER_USERNAME":"Administrator","CONTROLLER_PORT":"8080","_id":"local_computer"}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -222,12 +213,7 @@ paths:
           headers:
             Content-Type: application/json
             Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
-          body: >-
-            {
-            	"macAddress":"00:0C:29:18:3F:3F",
-            	"name":"switch1Devices",
-            	"deviceType": "VMWare_VM"
-            }
+          body: '{"macAddress":"00:0C:29:18:3F:3F","name":"switch1Devices","deviceType":"VMWare_VM"}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -356,13 +342,7 @@ paths:
           headers:
             Content-Type: application/json
             Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
-          body: >-
-            {
-              "id": 1,
-              "name": "raspberry pi",
-              "deviceType": "laptop",
-              "activeGroupID": 1
-            }
+          body: '{"id":1,"name":"raspberry pi","deviceType":"laptop","activeGroupID":1}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -456,11 +436,7 @@ paths:
           headers:
             Content-Type: application/json
             Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
-          body: >-
-            {
-             "name":"test zone for team 42",
-             "teamID":"42"
-            }
+          body: '{"name":"test zone for team 42","teamID":"42"}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -759,10 +735,7 @@ paths:
           headers:
             Content-Type: application/json
             Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
-          body: >-
-            {
-                "userID": "michael@unomicedge.com"
-            }
+          body: '{"userID":"michael@unomicedge.com"}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -857,7 +830,7 @@ paths:
           headers:
             Content-Type: application/json
             Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
-          body: "{\n	\"name\":\"test Org\",\n	\"orgAdminID\":10001,\n	\"email\":\"emailme@me.com\",\n	\"phone\":\"1234567890\",\n	\"location\":{\n		\"city\":\"my city\", \n	\"zip\":\"12345\",\n	\"state\":\"CA\",\n	\"country\":\"US\"\n	}\n}"
+          body: '{"name":"test Org","orgAdminID":10001,"email":"emailme@me.com","phone":"1234567890","location":{"city":"my city","zip":"12345","state":"CA","country":"US"}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1121,7 +1094,7 @@ paths:
           headers:
             Content-Type: application/json
             Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
-          body: "{\"siteName\": \"the test1 -delme\",\n\"teamID\": 42,\n\"orgID\":75,\n\"createController\":false,\n\"location\":{\n		        \"addressLine1\": \"1230 alive drive\",\n        \"addressLine2\": null,\n		\"city\":\"my city\", \n	\"zip\":\"12345\",\n	\"state\":\"CA\",\n	\"country\":\"US\"\n	}\n}"
+          body: '{"siteName":"the test1 -delme","teamID":42,"orgID":75,"createController":false,"location":{"addressLine1":"1230 alive drive","addressLine2":null,"city":"my city","zip":"12345","state":"CA","country":"US"}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1256,17 +1229,7 @@ paths:
           headers:
             Content-Type: application/json
             Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
-          body: >-
-            {"switchConfig":{
-            	"name": "test switch",
-            	"dpid":"test dpid",
-            	"macAddress":"11:22:33:44:55:66",
-            	"ipAddress":"1.2.3.4",
-            	"gatewayIp":"11.12.13.14",
-            	"gatewayMac":"01.02.03.04.05.06",
-            	"unmanagedPorts":[],
-            	"managedPorts":[]
-            }}
+          body: '{"switchConfig":{"name":"test switch","dpid":"test dpid","macAddress":"11:22:33:44:55:66","ipAddress":"1.2.3.4","gatewayIp":"11.12.13.14","gatewayMac":"01.02.03.04.05.06","unmanagedPorts":[],"managedPorts":[]}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1374,17 +1337,7 @@ paths:
           headers:
             Content-Type: application/json
             Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
-          body: >-
-            {"switchConfig":{
-            	"name": "test switch",
-            	"dpid":"test dpid",
-            	"macAddress":"11:22:33:44:55:66",
-            	"ipAddress":"1.2.3.4",
-            	"gatewayIp":"11.12.13.14",
-            	"gatewayMac":"01.02.03.04.05.06",
-            	"unmanagedPorts":[],
-            	"managedPorts":[]
-            }}
+          body: '{"switchConfig":{"name":"test switch","dpid":"test dpid","macAddress":"11:22:33:44:55:66","ipAddress":"1.2.3.4","gatewayIp":"11.12.13.14","gatewayMac":"01.02.03.04.05.06","unmanagedPorts":[],"managedPorts":[]}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1560,14 +1513,7 @@ paths:
           headers:
             Content-Type: application/json
             Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
-          body: >-
-            {
-            	"userID": 10001,
-            	"name":"testTeamToBeDeleted",
-            	"description": "A team that will be used to see if delete REST endpoint works.",
-            	"personal": false,
-            	"orgID":75
-            }
+          body: '{"userID":10001,"name":"testTeamToBeDeleted","description":"A team that will be used to see if delete REST endpoint works.","personal":false,"orgID":75}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1785,10 +1731,7 @@ paths:
           headers:
             Content-Type: application/json
             Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
-          body: >-
-            {
-            	"search":{"personal":true}
-            }
+          body: '{"search":{"personal":true}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1982,12 +1925,7 @@ paths:
           headers:
             Content-Type: application/json
             Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
-          body: >-
-            {"username": "chris@home.com",
-
-            "password" : "password"
-
-            }
+          body: '{"username":"chris@home.com","password":"password"}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2416,10 +2354,7 @@ paths:
           headers:
             Content-Type: application/json
             Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
-          body: >-
-            {
-            	"search":{"firstName":"chris"}
-            }
+          body: '{"search":{"firstName":"chris"}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
