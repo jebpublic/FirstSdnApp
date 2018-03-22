@@ -2801,6 +2801,7 @@ definitions:
         type: string
       addressLine2:
         description: ''
+        type: null
       city:
         description: ''
         example: my city
