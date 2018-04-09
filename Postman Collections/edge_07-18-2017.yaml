@@ -88,11 +88,6 @@ paths:
         required: true
         type: string
         description: ''
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -104,7 +99,6 @@ paths:
           uri: /api/controller/Skw5s0wTW/scope
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
           body: '{"vnet":["VmwareOvsOnTeamViewer","VmwareOvsS2OnTeamViewer"]}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -143,22 +137,17 @@ paths:
         required: true
         type: string
         description: ''
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: POST
           uri: /api/controller/
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
           body: '{"controllerInfo":{"CONTROLLER_IP":"172.20.0.5","CONTROLLER_PASSWORD":"admin","CONTROLLER_USERNAME":"Administrator","CONTROLLER_PORT":"8080","_id":"local_computer"}}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -197,22 +186,17 @@ paths:
         required: true
         type: string
         description: ''
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: POST
           uri: /api/device/register/macAddress
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
           body: '{"macAddress":"00:0C:29:18:3F:3F","name":"switch1Devices","deviceType":"VMWare_VM"}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -243,7 +227,8 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: DELETE
@@ -273,22 +258,16 @@ paths:
       operationId: ApiDeviceUserIDGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/device/<userID>
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -321,11 +300,6 @@ paths:
         description: ''
         schema:
           $ref: '#/definitions/UpdateDeviceByIdrequest'
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -334,14 +308,14 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: PUT
           uri: /api/device/1
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
           body: '{"id":1,"name":"raspberry pi","deviceType":"laptop","activeGroupID":1}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -368,22 +342,16 @@ paths:
       operationId: ApiGroupGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/group
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -420,22 +388,17 @@ paths:
         required: true
         type: string
         description: ''
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: POST
           uri: /api/group
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
           body: '{"name":"test zone for team 42","teamID":"42"}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -461,22 +424,16 @@ paths:
       operationId: ApiGroupDelete
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: DELETE
           uri: /api/group
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -502,22 +459,16 @@ paths:
       operationId: ApiGroup70001Get
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/group/70001
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -543,22 +494,16 @@ paths:
       operationId: ApiGroup70001TeamGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/group/70001/team
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -584,22 +529,16 @@ paths:
       operationId: ApiGroup70001DevicesGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/group/70001/devices
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -625,22 +564,16 @@ paths:
       operationId: ApiGroupGroupIDScoreGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/group/<groupID>/score
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -666,22 +599,16 @@ paths:
       operationId: ApiGroup150PolicyGet2
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/group/150/policy
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -719,22 +646,17 @@ paths:
         required: true
         type: string
         description: ''
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: POST
           uri: /api/group/151/inviteMember
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
           body: '{"userID":"michael@unomicedge.com"}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -761,22 +683,16 @@ paths:
       operationId: ApiUserUserIDRegisteredDevicesGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/user/<userID>/registeredDevices
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -809,11 +725,6 @@ paths:
         description: ''
         schema:
           $ref: '#/definitions/CreateNewOrgrequest'
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -822,14 +733,14 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: POST
           uri: /api/organization
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
           body: '{"name":"test Org","orgAdminID":10001,"email":"emailme@me.com","phone":"1234567890","location":{"city":"my city","zip":"12345","state":"CA","country":"US"}}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -856,22 +767,16 @@ paths:
       operationId: ApiOrganization79Get
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/organization/79
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -896,22 +801,16 @@ paths:
       operationId: ApiOrganization79Delete
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: DELETE
           uri: /api/organization/79
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -937,22 +836,16 @@ paths:
       operationId: ApiOrganization79TeamsGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/organization/79/teams
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -978,22 +871,16 @@ paths:
       operationId: ApiOrganization79SitesGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/organization/79/sites
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1020,11 +907,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -1033,13 +915,13 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: POST
           uri: /api/organization/<orgID>/orgMembers
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
             Content-Type: application/json
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1078,22 +960,17 @@ paths:
         required: true
         type: string
         description: ''
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: POST
           uri: /api/site
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
           body: '{"siteName":"the test1 -delme","teamID":42,"orgID":75,"createController":false,"location":{"addressLine1":"1230 alive drive","addressLine2":null,"city":"my city","zip":"12345","state":"CA","country":"US"}}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1120,22 +997,16 @@ paths:
       operationId: ApiSiteSiteIDGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/site/<siteID>
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1161,22 +1032,16 @@ paths:
       operationId: ApiSiteSiteIDSwitchesGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/site/<siteID>/switches
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1208,11 +1073,6 @@ paths:
         description: ''
         schema:
           $ref: '#/definitions/AddSiteSwitchrequest'
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -1221,14 +1081,14 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: POST
           uri: /api/site/<siteID>/switches
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
           body: '{"switchConfig":{"name":"test switch","dpid":"test dpid","macAddress":"11:22:33:44:55:66","ipAddress":"1.2.3.4","gatewayIp":"11.12.13.14","gatewayMac":"01.02.03.04.05.06","unmanagedPorts":[],"managedPorts":[]}}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1262,11 +1122,6 @@ paths:
         description: ''
         schema:
           $ref: '#/definitions/ChangeControllerrequest'
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -1275,14 +1130,14 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: PUT
           uri: /api/site/105/controller
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
           body: '{"controllerID":"Skw5s0wTW"}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1316,11 +1171,6 @@ paths:
         description: ''
         schema:
           $ref: '#/definitions/UpdateSiteSwitchrequest'
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -1329,14 +1179,14 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: PUT
           uri: /api/site/31/switches
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
           body: '{"switchConfig":{"name":"test switch","dpid":"test dpid","macAddress":"11:22:33:44:55:66","ipAddress":"1.2.3.4","gatewayIp":"11.12.13.14","gatewayMac":"01.02.03.04.05.06","unmanagedPorts":[],"managedPorts":[]}}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1363,22 +1213,16 @@ paths:
       operationId: ApiSite52Delete
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: DELETE
           uri: /api/site/52
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1404,22 +1248,16 @@ paths:
       operationId: ApiSiteGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/site/
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1445,22 +1283,16 @@ paths:
       operationId: ApiTeamGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/team/
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1492,11 +1324,6 @@ paths:
         description: ''
         schema:
           $ref: '#/definitions/CreateATeamrequest'
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -1505,14 +1332,14 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: POST
           uri: /api/team/
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
           body: '{"userID":10001,"name":"testTeamToBeDeleted","description":"A team that will be used to see if delete REST endpoint works.","personal":false,"orgID":75}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1539,22 +1366,16 @@ paths:
       operationId: ApiTeam42Get
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/team/42
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1580,22 +1401,16 @@ paths:
       operationId: ApiTeam42DevicesGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/team/42/devices
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1621,22 +1436,16 @@ paths:
       operationId: ApiTeam42GroupsGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/team/42/groups
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1662,22 +1471,16 @@ paths:
       operationId: ApiTeam42SitesGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/team/42/sites
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1710,11 +1513,6 @@ paths:
         description: ''
         schema:
           $ref: '#/definitions/TeamSearchrequest'
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -1723,14 +1521,14 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: POST
           uri: /api/team/search
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
           body: '{"search":{"personal":true}}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1758,11 +1556,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -1771,13 +1564,13 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: PUT
           uri: /api/team/<teamID>/teamMembers
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
             Content-Type: application/json
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1804,11 +1597,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -1817,13 +1605,13 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: POST
           uri: /api/team/<teamID>/teamMembers
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
             Content-Type: application/json
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1851,11 +1639,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -1864,13 +1647,13 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: DELETE
           uri: /api/team/48
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
             Content-Type: application/json
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1909,22 +1692,17 @@ paths:
         required: true
         type: string
         description: ''
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: POST
           uri: /api/user
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
           body: '{"username":"chris@home.com","password":"password"}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -1951,22 +1729,16 @@ paths:
       operationId: ApiUser584a1485cb3015983d4f0b16Delete
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: DELETE
           uri: /api/user/584a1485cb3015983d4f0b16
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1992,22 +1764,16 @@ paths:
       operationId: ApiUser10001Get
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/user/10001
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2033,22 +1799,16 @@ paths:
       operationId: ApiUser10001GroupsGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/user/10001/groups
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2074,22 +1834,16 @@ paths:
       operationId: ApiUser10001TeamsGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/user/10001/teams
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2115,22 +1869,16 @@ paths:
       operationId: ApiUser10001SitesGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/user/10001/sites
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2156,22 +1904,16 @@ paths:
       operationId: ApiUser10001OrganizationsGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/user/10001/organizations
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2197,22 +1939,16 @@ paths:
       operationId: ApiUser10001DevicesGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/user/10001/devices
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2239,11 +1975,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -2252,13 +1983,13 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: PUT
           uri: /api/user/<userID>/updatePassword
           headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
             Content-Type: application/json
         expectedResponse:
           x-allowExtraHeaders: true
@@ -2285,22 +2016,16 @@ paths:
       operationId: ApiUserUserIDPut
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: PUT
           uri: /api/user/<userID>
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2333,11 +2058,6 @@ paths:
         description: ''
         schema:
           $ref: '#/definitions/UserSearchrequest'
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -2346,14 +2066,14 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: POST
           uri: /api/user/search
           headers:
             Content-Type: application/json
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
           body: '{"search":{"firstName":"chris"}}'
         expectedResponse:
           x-allowExtraHeaders: true
@@ -2380,22 +2100,16 @@ paths:
       operationId: ApiUserGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/user/
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2421,22 +2135,16 @@ paths:
       operationId: ApiRuleTemplateClassTypesGet
       produces:
       - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
+      parameters: []
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
           uri: /api/ruleTemplate/class/types
-          headers:
-            Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2466,7 +2174,8 @@ paths:
       responses:
         200:
           description: ''
-      security: []
+      security:
+      - auth: []
       x-unitTests:
       - request:
           method: GET
