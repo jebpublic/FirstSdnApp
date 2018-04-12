@@ -971,7 +971,7 @@ paths:
           uri: /api/site
           headers:
             Content-Type: application/json
-          body: '{"siteName":"the test1 -delme","teamID":42,"orgID":75,"createController":false,"location":{"addressLine1":"1230 alive drive","addressLine2":null,"city":"my city","zip":"12345","state":"CA","country":"US"}}'
+          body: '{"siteName":"the test1 -delme","teamID":42,"orgID":75,"createController":false,"location":{"addressLine1":"1230 alive drive","addressLine2":"null","city":"my city","zip":"12345","state":"CA","country":"US"}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2460,7 +2460,7 @@ definitions:
       createController: false
       location:
         addressLine1: 1230 alive drive
-        addressLine2: 
+        addressLine2: null
         city: my city
         zip: 12345
         state: CA
@@ -2510,7 +2510,7 @@ definitions:
         type: string
       addressLine2:
         description: ''
-        type: null
+        type: string
       city:
         description: ''
         example: my city
