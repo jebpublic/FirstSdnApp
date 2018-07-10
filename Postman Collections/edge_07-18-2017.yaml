@@ -29,17 +29,17 @@ paths:
       produces:
       - application/json
       parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
       - name: Body
         in: body
         required: true
         description: ''
         schema:
           $ref: '#/definitions/LoginRequest'
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -77,17 +77,17 @@ paths:
       produces:
       - application/json
       parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
       - name: Body
         in: body
         required: true
         description: ''
         schema:
           $ref: '#/definitions/AddVnetScoperequest'
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -126,17 +126,17 @@ paths:
       produces:
       - application/json
       parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
       - name: Body
         in: body
         required: true
         description: ''
         schema:
           $ref: '#/definitions/CreateNewCopaConnectorrequest'
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -175,17 +175,17 @@ paths:
       produces:
       - application/json
       parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
       - name: Body
         in: body
         required: true
         description: ''
         schema:
           $ref: '#/definitions/PreregisterByMacrequest'
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -294,17 +294,17 @@ paths:
       produces:
       - application/json
       parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
       - name: Body
         in: body
         required: true
         description: ''
         schema:
           $ref: '#/definitions/UpdateDeviceByIdrequest'
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -377,17 +377,17 @@ paths:
       produces:
       - application/json
       parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
       - name: Body
         in: body
         required: true
         description: ''
         schema:
           $ref: '#/definitions/CreateNewGrouprequest'
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -635,17 +635,17 @@ paths:
       produces:
       - application/json
       parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
       - name: Body
         in: body
         required: true
         description: ''
         schema:
           $ref: '#/definitions/DeleteAMemberFromTheGrouprequest'
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -719,17 +719,17 @@ paths:
       produces:
       - application/json
       parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
       - name: Body
         in: body
         required: true
         description: ''
         schema:
           $ref: '#/definitions/CreateNewOrgrequest'
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -912,6 +912,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: string
       responses:
         200:
           description: ''
@@ -923,6 +929,12 @@ paths:
           uri: /api/organization/<orgID>/orgMembers
           headers:
             Content-Type: application/json
+          body: >-
+            {
+
+            "userID"<invitee user id>
+
+            }
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -949,17 +961,17 @@ paths:
       produces:
       - application/json
       parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
       - name: Body
         in: body
         required: true
         description: ''
         schema:
           $ref: '#/definitions/CreateNewSiterequest'
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1067,17 +1079,17 @@ paths:
       produces:
       - application/json
       parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
       - name: Body
         in: body
         required: true
         description: ''
         schema:
           $ref: '#/definitions/AddSiteSwitchrequest'
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1116,17 +1128,17 @@ paths:
       produces:
       - application/json
       parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
       - name: Body
         in: body
         required: true
         description: ''
         schema:
           $ref: '#/definitions/ChangeControllerrequest'
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1165,17 +1177,17 @@ paths:
       produces:
       - application/json
       parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
       - name: Body
         in: body
         required: true
         description: ''
         schema:
           $ref: '#/definitions/UpdateSiteSwitchrequest'
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1318,17 +1330,17 @@ paths:
       produces:
       - application/json
       parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
       - name: Body
         in: body
         required: true
         description: ''
         schema:
           $ref: '#/definitions/CreateATeamrequest'
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1507,17 +1519,17 @@ paths:
       produces:
       - application/json
       parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
       - name: Body
         in: body
         required: true
         description: ''
         schema:
           $ref: '#/definitions/TeamSearchrequest'
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1561,6 +1573,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: string
       responses:
         200:
           description: ''
@@ -1572,6 +1590,11 @@ paths:
           uri: /api/team/<teamID>/teamMembers
           headers:
             Content-Type: application/json
+          body: >-
+            {
+            	"userID": <userID>,
+            	"role": <teamAdmin or member>
+            }
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1602,6 +1625,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: string
       responses:
         200:
           description: ''
@@ -1613,6 +1642,11 @@ paths:
           uri: /api/team/<teamID>/teamMembers
           headers:
             Content-Type: application/json
+          body: >-
+            {
+            	"userID": <userID>,
+            	"role": <teamAdmin or member>
+            }
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -1681,17 +1715,17 @@ paths:
       produces:
       - application/json
       parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
       - name: Body
         in: body
         required: true
         description: ''
         schema:
           $ref: '#/definitions/CreateNewUserrequest'
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1980,6 +2014,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          type: string
       responses:
         200:
           description: ''
@@ -1991,6 +2031,10 @@ paths:
           uri: /api/user/<userID>/updatePassword
           headers:
             Content-Type: application/json
+          body: >-
+            {
+            	"password":<new_password>
+            }
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: NONE
@@ -2052,17 +2096,17 @@ paths:
       produces:
       - application/json
       parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
       - name: Body
         in: body
         required: true
         description: ''
         schema:
           $ref: '#/definitions/UserSearchrequest'
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
