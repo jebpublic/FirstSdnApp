@@ -1,2788 +1,1224 @@
-swagger: '2.0'
-info:
-  version: '1.0'
-  title: edge 07-18-2017
-  description: 'TODO: Add Description'
-host: dev-edge-backend.unomiclabs.com:3002
-basePath: /
-securityDefinitions:
-  auth:
-    type: oauth2
-    flow: implicit
-    authorizationUrl: http://dev-edge-backend.unomiclabs.com:3002
-    scopes: {}
-    x-skip-client-authentication: false
-schemes:
-- http
-consumes:
-- application/json
-produces:
-- application/json
-paths:
-  /auth/login:
-    post:
-      description: 'TODO: Add Description'
-      summary: login
-      tags:
-      - auth
-      operationId: AuthLoginPost
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/LoginRequest'
-      responses:
-        200:
-          description: ''
-      security: []
-      x-unitTests:
-      - request:
-          method: POST
-          uri: /auth/login
-          headers:
-            Content-Type: application/json
-          body: '{"username":"jeb@unomicedge.com","password":"unomicIs#1"}'
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: login
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/controller/Skw5s0wTW/scope:
-    put:
-      description: 'TODO: Add Description'
-      summary: add vnet scope
-      tags:
-      - controller
-      operationId: ApiControllerSkw5s0wTWScopePut
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/AddVnetScoperequest'
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: PUT
-          uri: /api/controller/Skw5s0wTW/scope
-          headers:
-            Content-Type: application/json
-          body: '{"vnet":["VmwareOvsOnTeamViewer","VmwareOvsS2OnTeamViewer"]}'
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: add vnet scope
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/controller/:
-    post:
-      description: 'TODO: Add Description'
-      summary: create new Copa Connector
-      tags:
-      - controller
-      operationId: ApiControllerPost
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/CreateNewCopaConnectorrequest'
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: POST
-          uri: /api/controller/
-          headers:
-            Content-Type: application/json
-          body: '{"controllerInfo":{"CONTROLLER_IP":"172.20.0.5","CONTROLLER_PASSWORD":"admin","CONTROLLER_USERNAME":"Administrator","CONTROLLER_PORT":"8080","_id":"local_computer"}}'
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: create new Copa Connector
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/device/register/macAddress:
-    post:
-      description: 'TODO: Add Description'
-      summary: preregister by mac
-      tags:
-      - device
-      operationId: ApiDeviceRegisterMacAddressPost
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/PreregisterByMacrequest'
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: POST
-          uri: /api/device/register/macAddress
-          headers:
-            Content-Type: application/json
-          body: '{"macAddress":"00:0C:29:18:3F:3F","name":"switch1Devices","deviceType":"VMWare_VM"}'
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: preregister by mac
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/device/<deviceID>:
-    delete:
-      description: 'TODO: Add Description'
-      summary: delete device
-      tags:
-      - device
-      operationId: ApiDeviceDeviceIDDelete
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: DELETE
-          uri: /api/device/<deviceID>
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: delete device
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/device/<userID>:
-    get:
-      description: 'TODO: Add Description'
-      summary: get device by id
-      tags:
-      - device
-      operationId: ApiDeviceUserIDGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/device/<userID>
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get device by id
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/device/1:
-    put:
-      description: 'TODO: Add Description'
-      summary: update device by id
-      tags:
-      - device
-      operationId: ApiDevice1Put
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/UpdateDeviceByIdrequest'
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: PUT
-          uri: /api/device/1
-          headers:
-            Content-Type: application/json
-          body: '{"id":1,"name":"raspberry pi","deviceType":"laptop","activeGroupID":1}'
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: update device by id
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/group:
-    get:
-      description: 'TODO: Add Description'
-      summary: '[future] get groups'
-      tags:
-      - group
-      operationId: ApiGroupGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/group
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: '[future] get groups'
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-    post:
-      description: 'TODO: Add Description'
-      summary: create new group
-      tags:
-      - group
-      operationId: ApiGroupPost
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/CreateNewGrouprequest'
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: POST
-          uri: /api/group
-          headers:
-            Content-Type: application/json
-          body: '{"name":"test zone for team 42","teamID":"42"}'
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: create new group
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-    delete:
-      description: 'TODO: Add Description'
-      summary: delete group
-      tags:
-      - group
-      operationId: ApiGroupDelete
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: DELETE
-          uri: /api/group
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: delete group
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/group/70001:
-    get:
-      description: 'TODO: Add Description'
-      summary: get group by id
-      tags:
-      - group
-      operationId: ApiGroup70001Get
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/group/70001
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get group by id
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/group/70001/team:
-    get:
-      description: 'TODO: Add Description'
-      summary: get team that admins this group
-      tags:
-      - group
-      operationId: ApiGroup70001TeamGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/group/70001/team
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get team that admins this group
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/group/70001/devices:
-    get:
-      description: 'TODO: Add Description'
-      summary: get devices in a group
-      tags:
-      - group
-      operationId: ApiGroup70001DevicesGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/group/70001/devices
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get devices in a group
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/group/<groupID>/score:
-    get:
-      description: 'TODO: Add Description'
-      summary: group score
-      tags:
-      - group
-      operationId: ApiGroupGroupIDScoreGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/group/<groupID>/score
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: group score
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/group/150/policy:
-    get:
-      description: 'TODO: Add Description'
-      summary: get policy
-      tags:
-      - policy
-      operationId: ApiGroup150PolicyGet2
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/group/150/policy
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get policy
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/group/151/inviteMember:
-    post:
-      description: 'TODO: Add Description'
-      summary: Delete a member from the group
-      tags:
-      - group
-      operationId: ApiGroup151InviteMemberPost2
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/DeleteAMemberFromTheGrouprequest'
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: POST
-          uri: /api/group/151/inviteMember
-          headers:
-            Content-Type: application/json
-          body: '{"userID":"michael@unomicedge.com"}'
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: Delete a member from the group
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/user/<userID>/registeredDevices:
-    get:
-      description: 'TODO: Add Description'
-      summary: '[archive] get user registered devices'
-      tags:
-      - group
-      operationId: ApiUserUserIDRegisteredDevicesGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/user/<userID>/registeredDevices
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: '[archive] get user registered devices'
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/organization:
-    post:
-      description: 'TODO: Add Description'
-      summary: create new org
-      tags:
-      - organization
-      operationId: ApiOrganizationPost
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/CreateNewOrgrequest'
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: POST
-          uri: /api/organization
-          headers:
-            Content-Type: application/json
-          body: '{"name":"test Org","orgAdminID":10001,"email":"emailme@me.com","phone":"1234567890","location":{"city":"my city","zip":"12345","state":"CA","country":"US"}}'
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: create new org
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/organization/79:
-    get:
-      description: 'TODO: Add Description'
-      summary: get org by ID
-      tags:
-      - organization
-      operationId: ApiOrganization79Get
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/organization/79
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get org by ID
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-    delete:
-      description: 'TODO: Add Description'
-      summary: '[future] get org by ID'
-      tags:
-      - organization
-      operationId: ApiOrganization79Delete
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: DELETE
-          uri: /api/organization/79
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: '[future] get org by ID'
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/organization/79/teams:
-    get:
-      description: 'TODO: Add Description'
-      summary: get org owned teams
-      tags:
-      - organization
-      operationId: ApiOrganization79TeamsGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/organization/79/teams
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get org owned teams
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/organization/79/sites:
-    get:
-      description: 'TODO: Add Description'
-      summary: get org owned sites
-      tags:
-      - organization
-      operationId: ApiOrganization79SitesGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/organization/79/sites
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get org owned sites
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/organization/<orgID>/orgMembers:
-    post:
-      description: 'TODO: Add Description'
-      summary: invite member to org
-      tags:
-      - organization
-      operationId: ApiOrganizationOrgIDOrgMembersPost
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          type: string
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: POST
-          uri: /api/organization/<orgID>/orgMembers
-          headers:
-            Content-Type: application/json
-          body: >-
+{
+  "info": {
+    "_postman_id": "22394-edb18ac8-b6b2-47eb-069a-94c196d68637",
+    "name": "edge 07-18-2017",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "22394-84c169f0-536b-006d-ef9e-55af832adeeb",
+      "name": "auth",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "22394-68a8d46a-a984-eaf0-10e2-1c5fdb499327",
+          "name": "login",
+          "event": [
             {
-
-            "userID"<invitee user id>
-
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "if(jsonData.token)",
+                  "postman.setEnvironmentVariable(\"edgetoken\", \"bearer \" + jsonData.token);"
+                ]
+              }
             }
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: invite member to org
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/site:
-    post:
-      description: 'TODO: Add Description'
-      summary: create new site
-      tags:
-      - site
-      operationId: ApiSitePost
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/CreateNewSiterequest'
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: POST
-          uri: /api/site
-          headers:
-            Content-Type: application/json
-          body: '{"siteName":"the test1 -delme","teamID":42,"orgID":75,"createController":false,"location":{"addressLine1":"1230 alive drive","addressLine2":"null","city":"my city","zip":"12345","state":"CA","country":"US"}}'
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: create new site
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/site/<siteID>:
-    get:
-      description: 'TODO: Add Description'
-      summary: get site by id
-      tags:
-      - site
-      operationId: ApiSiteSiteIDGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/site/<siteID>
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get site by id
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/site/<siteID>/switches:
-    get:
-      description: 'TODO: Add Description'
-      summary: get site switches
-      tags:
-      - site
-      operationId: ApiSiteSiteIDSwitchesGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/site/<siteID>/switches
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get site switches
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-    post:
-      description: 'TODO: Add Description'
-      summary: add site switch
-      tags:
-      - site
-      operationId: ApiSiteSiteIDSwitchesPost
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/AddSiteSwitchrequest'
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: POST
-          uri: /api/site/<siteID>/switches
-          headers:
-            Content-Type: application/json
-          body: '{"switchConfig":{"name":"test switch","dpid":"test dpid","macAddress":"11:22:33:44:55:66","ipAddress":"1.2.3.4","gatewayIp":"11.12.13.14","gatewayMac":"01.02.03.04.05.06","unmanagedPorts":[],"managedPorts":[]}}'
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: add site switch
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/site/105/controller:
-    put:
-      description: 'TODO: Add Description'
-      summary: Change Controller
-      tags:
-      - site
-      operationId: ApiSite105ControllerPut
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/ChangeControllerrequest'
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: PUT
-          uri: /api/site/105/controller
-          headers:
-            Content-Type: application/json
-          body: '{"controllerID":"Skw5s0wTW"}'
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: Change Controller
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/site/31/switches:
-    put:
-      description: 'TODO: Add Description'
-      summary: update site switch
-      tags:
-      - site
-      operationId: ApiSite31SwitchesPut
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/UpdateSiteSwitchrequest'
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: PUT
-          uri: /api/site/31/switches
-          headers:
-            Content-Type: application/json
-          body: '{"switchConfig":{"name":"test switch","dpid":"test dpid","macAddress":"11:22:33:44:55:66","ipAddress":"1.2.3.4","gatewayIp":"11.12.13.14","gatewayMac":"01.02.03.04.05.06","unmanagedPorts":[],"managedPorts":[]}}'
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: update site switch
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/site/52:
-    delete:
-      description: 'TODO: Add Description'
-      summary: '[future] delete site by id'
-      tags:
-      - site
-      operationId: ApiSite52Delete
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: DELETE
-          uri: /api/site/52
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: '[future] delete site by id'
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/site/:
-    get:
-      description: 'TODO: Add Description'
-      summary: '[future] get sites'
-      tags:
-      - site
-      operationId: ApiSiteGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/site/
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: '[future] get sites'
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/team/:
-    get:
-      description: 'TODO: Add Description'
-      summary: '[future] get all teams'
-      tags:
-      - teams
-      operationId: ApiTeamGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/team/
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: '[future] get all teams'
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-    post:
-      description: 'TODO: Add Description'
-      summary: create a team
-      tags:
-      - teams
-      operationId: ApiTeamPost
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/CreateATeamrequest'
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: POST
-          uri: /api/team/
-          headers:
-            Content-Type: application/json
-          body: '{"userID":10001,"name":"testTeamToBeDeleted","description":"A team that will be used to see if delete REST endpoint works.","personal":false,"orgID":75}'
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: create a team
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/team/42:
-    get:
-      description: 'TODO: Add Description'
-      summary: get team by Id
-      tags:
-      - teams
-      operationId: ApiTeam42Get
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/team/42
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get team by Id
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/team/42/devices:
-    get:
-      description: 'TODO: Add Description'
-      summary: get devices admined by a team
-      tags:
-      - teams
-      operationId: ApiTeam42DevicesGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/team/42/devices
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get devices admined by a team
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/team/42/groups:
-    get:
-      description: 'TODO: Add Description'
-      summary: get groups/zones admined by a team
-      tags:
-      - teams
-      operationId: ApiTeam42GroupsGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/team/42/groups
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get groups/zones admined by a team
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/team/42/sites:
-    get:
-      description: 'TODO: Add Description'
-      summary: get sites admined by team
-      tags:
-      - teams
-      operationId: ApiTeam42SitesGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/team/42/sites
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get sites admined by team
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/team/search:
-    post:
-      description: 'TODO: Add Description'
-      summary: team search
-      tags:
-      - teams
-      operationId: ApiTeamSearchPost
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/TeamSearchrequest'
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: POST
-          uri: /api/team/search
-          headers:
-            Content-Type: application/json
-          body: '{"search":{"personal":true}}'
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: team search
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/team/<teamID>/teamMembers:
-    put:
-      description: 'TODO: Add Description'
-      summary: update user role for team
-      tags:
-      - teams
-      operationId: ApiTeamTeamIDTeamMembersPut
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          type: string
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: PUT
-          uri: /api/team/<teamID>/teamMembers
-          headers:
-            Content-Type: application/json
-          body: >-
-            {
-            	"userID": <userID>,
-            	"role": <teamAdmin or member>
-            }
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: update user role for team
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-    post:
-      description: 'TODO: Add Description'
-      summary: invite member to team
-      tags:
-      - teams
-      operationId: ApiTeamTeamIDTeamMembersPost
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          type: string
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: POST
-          uri: /api/team/<teamID>/teamMembers
-          headers:
-            Content-Type: application/json
-          body: >-
-            {
-            	"userID": <userID>,
-            	"role": <teamAdmin or member>
-            }
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: invite member to team
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/team/48:
-    delete:
-      description: 'TODO: Add Description'
-      summary: '[future] delete a team'
-      tags:
-      - teams
-      operationId: ApiTeam48Delete
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: DELETE
-          uri: /api/team/48
-          headers:
-            Content-Type: application/json
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: '[future] delete a team'
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/user:
-    post:
-      description: 'TODO: Add Description'
-      summary: create new user
-      tags:
-      - user
-      operationId: ApiUserPost
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/CreateNewUserrequest'
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: POST
-          uri: /api/user
-          headers:
-            Content-Type: application/json
-          body: '{"username":"chris@home.com","password":"password"}'
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: create new user
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/user/584a1485cb3015983d4f0b16:
-    delete:
-      description: 'TODO: Add Description'
-      summary: delete user by id
-      tags:
-      - user
-      operationId: ApiUser584a1485cb3015983d4f0b16Delete
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: DELETE
-          uri: /api/user/584a1485cb3015983d4f0b16
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: delete user by id
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/user/10001:
-    get:
-      description: 'TODO: Add Description'
-      summary: get user by id
-      tags:
-      - user
-      operationId: ApiUser10001Get
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/user/10001
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get user by id
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/user/10001/groups:
-    get:
-      description: 'TODO: Add Description'
-      summary: get user groups
-      tags:
-      - user
-      operationId: ApiUser10001GroupsGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/user/10001/groups
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get user groups
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/user/10001/teams:
-    get:
-      description: 'TODO: Add Description'
-      summary: get user teams
-      tags:
-      - user
-      operationId: ApiUser10001TeamsGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/user/10001/teams
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get user teams
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/user/10001/sites:
-    get:
-      description: 'TODO: Add Description'
-      summary: get user's site
-      tags:
-      - user
-      operationId: ApiUser10001SitesGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/user/10001/sites
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get user's site
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/user/10001/organizations:
-    get:
-      description: 'TODO: Add Description'
-      summary: get user's org
-      tags:
-      - user
-      operationId: ApiUser10001OrganizationsGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/user/10001/organizations
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get user's org
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/user/10001/devices:
-    get:
-      description: 'TODO: Add Description'
-      summary: get user devices
-      tags:
-      - user
-      operationId: ApiUser10001DevicesGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/user/10001/devices
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get user devices
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/user/<userID>/updatePassword:
-    put:
-      description: 'TODO: Add Description'
-      summary: update user password
-      tags:
-      - user
-      operationId: ApiUserUserIDUpdatePasswordPut
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          type: string
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: PUT
-          uri: /api/user/<userID>/updatePassword
-          headers:
-            Content-Type: application/json
-          body: >-
-            {
-            	"password":<new_password>
-            }
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: update user password
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/user/<userID>:
-    put:
-      description: 'TODO: Add Description'
-      summary: update user
-      tags:
-      - user
-      operationId: ApiUserUserIDPut
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: PUT
-          uri: /api/user/<userID>
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: update user
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/user/search:
-    post:
-      description: 'TODO: Add Description'
-      summary: user search
-      tags:
-      - user
-      operationId: ApiUserSearchPost
-      produces:
-      - application/json
-      parameters:
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/UserSearchrequest'
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: POST
-          uri: /api/user/search
-          headers:
-            Content-Type: application/json
-          body: '{"search":{"firstName":"chris"}}'
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: user search
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/user/:
-    get:
-      description: 'TODO: Add Description'
-      summary: '[archive] get users'
-      tags:
-      - user
-      operationId: ApiUserGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/user/
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: '[archive] get users'
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /api/ruleTemplate/class/types:
-    get:
-      description: 'TODO: Add Description'
-      summary: get rule template classes
-      tags:
-      - policy
-      operationId: ApiRuleTemplateClassTypesGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /api/ruleTemplate/class/types
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: get rule template classes
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-  /version:
-    get:
-      description: 'TODO: Add Description'
-      summary: version
-      tags:
-      - Misc
-      operationId: VersionGet
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        200:
-          description: ''
-      security:
-      - auth: []
-      x-unitTests:
-      - request:
-          method: GET
-          uri: /version
-        expectedResponse:
-          x-allowExtraHeaders: true
-          x-bodyMatchMode: NONE
-          x-arrayOrderedMatching: false
-          x-arrayCheckCount: false
-          x-matchResponseSchema: true
-          headers: {}
-        x-testShouldPass: true
-        x-testEnabled: true
-        x-testName: version
-        x-testDescription: 'TODO: Add Description'
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-definitions:
-  LoginRequest:
-    title: loginRequest
-    example:
-      username: jeb@unomicedge.com
-      password: unomicIs#1
-    type: object
-    properties:
-      username:
-        description: ''
-        example: jeb@unomicedge.com
-        type: string
-      password:
-        description: ''
-        example: unomicIs#1
-        type: string
-    required:
-    - username
-    - password
-  AddVnetScoperequest:
-    title: add vnet scopeRequest
-    example:
-      vnet:
-      - VmwareOvsOnTeamViewer
-      - VmwareOvsS2OnTeamViewer
-    type: object
-    properties:
-      vnet:
-        description: ''
-        example:
-        - VmwareOvsOnTeamViewer
-        - VmwareOvsS2OnTeamViewer
-        type: array
-        items:
-          type: string
-    required:
-    - vnet
-  CreateNewCopaConnectorrequest:
-    title: create new Copa ConnectorRequest
-    example:
-      controllerInfo:
-        CONTROLLER_IP: 172.20.0.5
-        CONTROLLER_PASSWORD: admin
-        CONTROLLER_USERNAME: Administrator
-        CONTROLLER_PORT: 8080
-        _id: local_computer
-    type: object
-    properties:
-      controllerInfo:
-        $ref: '#/definitions/ControllerInfo'
-    required:
-    - controllerInfo
-  ControllerInfo:
-    title: ControllerInfo
-    example:
-      CONTROLLER_IP: 172.20.0.5
-      CONTROLLER_PASSWORD: admin
-      CONTROLLER_USERNAME: Administrator
-      CONTROLLER_PORT: 8080
-      _id: local_computer
-    type: object
-    properties:
-      CONTROLLER_IP:
-        description: ''
-        example: 172.20.0.5
-        type: string
-      CONTROLLER_PASSWORD:
-        description: ''
-        example: admin
-        type: string
-      CONTROLLER_USERNAME:
-        description: ''
-        example: Administrator
-        type: string
-      CONTROLLER_PORT:
-        description: ''
-        example: 8080
-        type: string
-      _id:
-        description: ''
-        example: local_computer
-        type: string
-    required:
-    - CONTROLLER_IP
-    - CONTROLLER_PASSWORD
-    - CONTROLLER_USERNAME
-    - CONTROLLER_PORT
-    - _id
-  PreregisterByMacrequest:
-    title: preregister by macRequest
-    example:
-      macAddress: 00:0C:29:18:3F:3F
-      name: switch1Devices
-      deviceType: VMWare_VM
-    type: object
-    properties:
-      macAddress:
-        description: ''
-        example: 00:0C:29:18:3F:3F
-        type: string
-      name:
-        description: ''
-        example: switch1Devices
-        type: string
-      deviceType:
-        description: ''
-        example: VMWare_VM
-        type: string
-    required:
-    - macAddress
-    - name
-    - deviceType
-  UpdateDeviceByIdrequest:
-    title: update device by idRequest
-    example:
-      id: 1
-      name: raspberry pi
-      deviceType: laptop
-      activeGroupID: 1
-    type: object
-    properties:
-      id:
-        description: ''
-        example: 1
-        type: integer
-        format: int32
-      name:
-        description: ''
-        example: raspberry pi
-        type: string
-      deviceType:
-        description: ''
-        example: laptop
-        type: string
-      activeGroupID:
-        description: ''
-        example: 1
-        type: integer
-        format: int32
-    required:
-    - id
-    - name
-    - deviceType
-    - activeGroupID
-  CreateNewGrouprequest:
-    title: create new groupRequest
-    example:
-      name: test zone for team 42
-      teamID: 42
-    type: object
-    properties:
-      name:
-        description: ''
-        example: test zone for team 42
-        type: string
-      teamID:
-        description: ''
-        example: 42
-        type: string
-    required:
-    - name
-    - teamID
-  InviteNewMemberrequest:
-    title: invite new memberRequest
-    example:
-      userID: michael@unomicedge.com
-    type: object
-    properties:
-      userID:
-        description: ''
-        example: michael@unomicedge.com
-        type: string
-    required:
-    - userID
-  DeleteAMemberFromTheGrouprequest:
-    title: Delete a member from the groupRequest
-    example:
-      userID: michael@unomicedge.com
-    type: object
-    properties:
-      userID:
-        description: ''
-        example: michael@unomicedge.com
-        type: string
-    required:
-    - userID
-  CreateNewOrgrequest:
-    title: create new orgRequest
-    example:
-      name: test Org
-      orgAdminID: 10001
-      email: emailme@me.com
-      phone: 1234567890
-      location:
-        city: my city
-        zip: 12345
-        state: CA
-        country: US
-    type: object
-    properties:
-      name:
-        description: ''
-        example: test Org
-        type: string
-      orgAdminID:
-        description: ''
-        example: 10001
-        type: integer
-        format: int32
-      email:
-        description: ''
-        example: emailme@me.com
-        type: string
-      phone:
-        description: ''
-        example: 1234567890
-        type: string
-      location:
-        $ref: '#/definitions/Location'
-    required:
-    - name
-    - orgAdminID
-    - email
-    - phone
-    - location
-  Location:
-    title: Location
-    example:
-      city: my city
-      zip: 12345
-      state: CA
-      country: US
-    type: object
-    properties:
-      city:
-        description: ''
-        example: my city
-        type: string
-      zip:
-        description: ''
-        example: 12345
-        type: string
-      state:
-        description: ''
-        example: CA
-        type: string
-      country:
-        description: ''
-        example: US
-        type: string
-    required:
-    - city
-    - zip
-    - state
-    - country
-  CreateNewSiterequest:
-    title: create new siteRequest
-    example:
-      siteName: the test1 -delme
-      teamID: 42
-      orgID: 75
-      createController: false
-      location:
-        addressLine1: 1230 alive drive
-        addressLine2: null
-        city: my city
-        zip: 12345
-        state: CA
-        country: US
-    type: object
-    properties:
-      siteName:
-        description: ''
-        example: the test1 -delme
-        type: string
-      teamID:
-        description: ''
-        example: 42
-        type: integer
-        format: int32
-      orgID:
-        description: ''
-        example: 75
-        type: integer
-        format: int32
-      createController:
-        description: ''
-        example: false
-        type: boolean
-      location:
-        $ref: '#/definitions/Location12'
-    required:
-    - siteName
-    - teamID
-    - orgID
-    - createController
-    - location
-  Location12:
-    title: Location12
-    example:
-      addressLine1: 1230 alive drive
-      addressLine2: 
-      city: my city
-      zip: 12345
-      state: CA
-      country: US
-    type: object
-    properties:
-      addressLine1:
-        description: ''
-        example: 1230 alive drive
-        type: string
-      addressLine2:
-        description: ''
-        type: string
-      city:
-        description: ''
-        example: my city
-        type: string
-      zip:
-        description: ''
-        example: 12345
-        type: string
-      state:
-        description: ''
-        example: CA
-        type: string
-      country:
-        description: ''
-        example: US
-        type: string
-    required:
-    - addressLine1
-    - addressLine2
-    - city
-    - zip
-    - state
-    - country
-  ChangeControllerrequest:
-    title: Change ControllerRequest
-    example:
-      controllerID: Skw5s0wTW
-    type: object
-    properties:
-      controllerID:
-        description: ''
-        example: Skw5s0wTW
-        type: string
-    required:
-    - controllerID
-  AddSiteSwitchrequest:
-    title: add site switchRequest
-    example:
-      switchConfig:
-        name: test switch
-        dpid: test dpid
-        macAddress: 11:22:33:44:55:66
-        ipAddress: 1.2.3.4
-        gatewayIp: 11.12.13.14
-        gatewayMac: 01.02.03.04.05.06
-        unmanagedPorts: []
-        managedPorts: []
-    type: object
-    properties:
-      switchConfig:
-        $ref: '#/definitions/SwitchConfig'
-    required:
-    - switchConfig
-  SwitchConfig:
-    title: SwitchConfig
-    example:
-      name: test switch
-      dpid: test dpid
-      macAddress: 11:22:33:44:55:66
-      ipAddress: 1.2.3.4
-      gatewayIp: 11.12.13.14
-      gatewayMac: 01.02.03.04.05.06
-      unmanagedPorts: []
-      managedPorts: []
-    type: object
-    properties:
-      name:
-        description: ''
-        example: test switch
-        type: string
-      dpid:
-        description: ''
-        example: test dpid
-        type: string
-      macAddress:
-        description: ''
-        example: 11:22:33:44:55:66
-        type: string
-      ipAddress:
-        description: ''
-        example: 1.2.3.4
-        type: string
-      gatewayIp:
-        description: ''
-        example: 11.12.13.14
-        type: string
-      gatewayMac:
-        description: ''
-        example: 01.02.03.04.05.06
-        type: string
-      unmanagedPorts:
-        description: ''
-        example: []
-        type: array
-        items:
-          type: string
-      managedPorts:
-        description: ''
-        example: []
-        type: array
-        items:
-          type: string
-    required:
-    - name
-    - dpid
-    - macAddress
-    - ipAddress
-    - gatewayIp
-    - gatewayMac
-    - unmanagedPorts
-    - managedPorts
-  UpdateSiteSwitchrequest:
-    title: update site switchRequest
-    example:
-      switchConfig:
-        name: test switch
-        dpid: test dpid
-        macAddress: 11:22:33:44:55:66
-        ipAddress: 1.2.3.4
-        gatewayIp: 11.12.13.14
-        gatewayMac: 01.02.03.04.05.06
-        unmanagedPorts: []
-        managedPorts: []
-    type: object
-    properties:
-      switchConfig:
-        $ref: '#/definitions/SwitchConfig'
-    required:
-    - switchConfig
-  CreateATeamrequest:
-    title: create a teamRequest
-    example:
-      userID: 10001
-      name: testTeamToBeDeleted
-      description: A team that will be used to see if delete REST endpoint works.
-      personal: false
-      orgID: 75
-    type: object
-    properties:
-      userID:
-        description: ''
-        example: 10001
-        type: integer
-        format: int32
-      name:
-        description: ''
-        example: testTeamToBeDeleted
-        type: string
-      description:
-        description: ''
-        example: A team that will be used to see if delete REST endpoint works.
-        type: string
-      personal:
-        description: ''
-        example: false
-        type: boolean
-      orgID:
-        description: ''
-        example: 75
-        type: integer
-        format: int32
-    required:
-    - userID
-    - name
-    - description
-    - personal
-    - orgID
-  TeamSearchrequest:
-    title: team searchRequest
-    example:
-      search:
-        personal: true
-    type: object
-    properties:
-      search:
-        $ref: '#/definitions/Search'
-    required:
-    - search
-  Search:
-    title: Search
-    example:
-      personal: true
-    type: object
-    properties:
-      personal:
-        description: ''
-        example: true
-        type: boolean
-    required:
-    - personal
-  CreateNewUserrequest:
-    title: create new userRequest
-    example:
-      username: chris@home.com
-      password: password
-    type: object
-    properties:
-      username:
-        description: ''
-        example: chris@home.com
-        type: string
-      password:
-        description: ''
-        example: password
-        type: string
-    required:
-    - username
-    - password
-  UserSearchrequest:
-    title: user searchRequest
-    example:
-      search:
-        firstName: chris
-    type: object
-    properties:
-      search:
-        $ref: '#/definitions/Search23'
-    required:
-    - search
-  Search23:
-    title: Search23
-    example:
-      firstName: chris
-    type: object
-    properties:
-      firstName:
-        description: ''
-        example: chris
-        type: string
-    required:
-    - firstName
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \n\"username\":\"jeb@unomicedge.com\",\n\"password\":\"unomicIs#1\"\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/auth/login"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "22394-2d7a918c-e0d5-809b-7c14-431b2f2b18a1",
+      "name": "controller",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "22394-b65c79d5-0fba-3799-4f30-119f71687ed0",
+          "name": "add vnet scope",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"vnet\":[\"VmwareOvsOnTeamViewer\",\"VmwareOvsS2OnTeamViewer\"]}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/controller/Skw5s0wTW/scope"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-ad1d519c-7985-d199-c40e-e40c871f7941",
+          "name": "create new Copa Connector",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"controllerInfo\":{\n\t\t\"CONTROLLER_IP\":\"172.20.0.5\",\n\t\t\"CONTROLLER_PASSWORD\":\"admin\",\n\t\t\"CONTROLLER_USERNAME\":\"Administrator\",\n\t\t\"CONTROLLER_PORT\":\"8080\",\n\t\t\"_id\": \"local_computer\"\n\t}\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/controller/"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "22394-ea836673-d8f2-d837-6d0e-78d6a472f1cf",
+      "name": "device",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "22394-93c84d9e-3928-354b-2e66-e65794470c01",
+          "name": "preregister by mac",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"macAddress\":\"00:0C:29:18:3F:3F\",\n\t\"name\":\"switch1Devices\",\n\t\"deviceType\": \"VMWare_VM\"\n}"
+            },
+            "url": "dev-edge-backend.unomiclabs.com:3002/api/device/register/macAddress"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-9178db78-301c-7fe4-7443-8c43786144a4",
+          "name": "delete device",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/device/<deviceID>"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-b1030fec-4a4d-9a78-1344-cd1220c8ac89",
+          "name": "get device by id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/device/<userID>"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-c561b7eb-291c-b947-af30-b374157743f7",
+          "name": "update device by id",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"name\": \"raspberry pi\",\n  \"deviceType\": \"laptop\",\n  \"activeGroupID\": 1\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/device/1"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "22394-9350893d-db5a-c7c8-fa22-2faeaed1a5db",
+      "name": "group",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "22394-6fabaece-8461-2013-f79d-3597a966ab56",
+          "name": "create new group",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n \"name\":\"test zone for team 42\",\n \"teamID\":\"42\"\n}"
+            },
+            "url": "dev-edge-backend.unomiclabs.com:3002/api/group"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-fb610cc4-aba4-c2bf-e061-ce289e663a9f",
+          "name": "delete group",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/group"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-e5d1f407-cb99-c722-3a94-34fd26d998ec",
+          "name": "get group by id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/group/70001"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-3d81ca18-e7af-94b7-99da-8575b9d24f4b",
+          "name": "get team that admins this group",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/group/70001/team"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-fdd73cfd-4192-d9ed-2c5b-8a4be7b864a9",
+          "name": "get devices in a group",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/group/70001/devices"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-9b61ab27-3691-47e7-4cd2-23a5b0c6a6cf",
+          "name": "group score",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/group/<groupID>/score"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-b653d67c-383e-46af-2c17-c4e48dfb2bb3",
+          "name": "get group policy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/group/150/policy"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-25ec1335-2bb4-f685-e7f2-ca4d9d019875",
+          "name": "invite new member",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"userID\": \"michael@unomicedge.com\"\n}"
+            },
+            "url": "dev-edge-backend.unomiclabs.com:3002/api/group/151/inviteMember"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-1d3081b0-9d56-4e78-871d-1cc1f488423a",
+          "name": "Delete a member from the group",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"userID\": \"michael@unomicedge.com\"\n}"
+            },
+            "url": "dev-edge-backend.unomiclabs.com:3002/api/group/151/inviteMember"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-6dbf310d-479d-3f66-b5f4-175276fc447f",
+          "name": "[future] get groups",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/group"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-863cb701-e4c6-7e32-f4e9-1960361d32a5",
+          "name": "[archive] get user registered devices",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/<userID>/registeredDevices"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "22394-2805a2e3-734a-f00c-ef51-d7cc2f1ec73e",
+      "name": "organization",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "22394-43d42700-188a-14dc-fdb4-9fc2b6010ac9",
+          "name": "create new org",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"name\":\"test Org\",\n\t\"orgAdminID\":10001,\n\t\"email\":\"emailme@me.com\",\n\t\"phone\":\"1234567890\",\n\t\"location\":{\n\t\t\"city\":\"my city\", \n\t\"zip\":\"12345\",\n\t\"state\":\"CA\",\n\t\"country\":\"US\"\n\t}\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/organization"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-bc790b02-9184-2b87-6c28-7a79e1805102",
+          "name": "get org by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {},
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/organization/79"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-3092cc0f-5ab7-5bf1-783e-e907b683f84d",
+          "name": "get org owned teams",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {},
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/organization/79/teams"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-46e84ed9-7fdf-7fd9-29e5-d938e263cd82",
+          "name": "get org owned sites",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {},
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/organization/79/sites"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-56a287e0-ad34-3972-e530-65fef11a333b",
+          "name": "invite member to org",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"userID\"<invitee user id>\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/organization/<orgID>/orgMembers"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-37480399-8119-df6f-43be-c32350c29fac",
+          "name": "[future] get org by ID",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {},
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/organization/79"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "22394-24001188-598c-9882-b617-f50d2f461bc5",
+      "name": "site",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "22394-bd66485c-ecf2-5315-4e43-b572ee7f3c72",
+          "name": "create new site",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"siteName\": \"the test1 -delme\",\n\"teamID\": 42,\n\"orgID\":75,\n\"createController\":false,\n\"location\":{\n\t\t        \"addressLine1\": \"1230 alive drive\",\n        \"addressLine2\": null,\n\t\t\"city\":\"my city\", \n\t\"zip\":\"12345\",\n\t\"state\":\"CA\",\n\t\"country\":\"US\"\n\t}\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/site"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-9e8bb87b-1445-9021-a720-f612354e0fb2",
+          "name": "get site by id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/site/<siteID>"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-c316b866-31eb-0597-6d68-1ce97dd46992",
+          "name": "get site switches",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/site/<siteID>/switches"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-f6167fa3-95fa-656b-9bcf-80706d54227d",
+          "name": "Change Controller",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"controllerID\":\"Skw5s0wTW\"}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/site/105/controller"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-c9ebf15e-5d65-80d6-5210-0ea7fc5bace7",
+          "name": "add site switch",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"switchConfig\":{\n\t\"name\": \"test switch\",\n\t\"dpid\":\"test dpid\",\n\t\"macAddress\":\"11:22:33:44:55:66\",\n\t\"ipAddress\":\"1.2.3.4\",\n\t\"gatewayIp\":\"11.12.13.14\",\n\t\"gatewayMac\":\"01.02.03.04.05.06\",\n\t\"unmanagedPorts\":[],\n\t\"managedPorts\":[]\n}}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/site/<siteID>/switches"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-0ed02fff-8dc8-0e30-a522-47290467822d",
+          "name": "update site switch",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"switchConfig\":{\n\t\"name\": \"test switch\",\n\t\"dpid\":\"test dpid\",\n\t\"macAddress\":\"11:22:33:44:55:66\",\n\t\"ipAddress\":\"1.2.3.4\",\n\t\"gatewayIp\":\"11.12.13.14\",\n\t\"gatewayMac\":\"01.02.03.04.05.06\",\n\t\"unmanagedPorts\":[],\n\t\"managedPorts\":[]\n}}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/site/31/switches"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-ebb38ec9-f964-100a-8509-e6e1d17b060f",
+          "name": "[future] delete site by id",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/site/52"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-6d73e90f-b456-77a0-5bab-123593ab0e82",
+          "name": "[future] get sites",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/site/"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "22394-f29ee23a-2f28-f522-2732-47795e8d1681",
+      "name": "teams",
+      "description": "team api calls",
+      "item": [
+        {
+          "_postman_id": "22394-ff55161e-a5e5-a2fe-ee3c-851bc29bf1c1",
+          "name": "create a team",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"userID\": 10001,\n\t\"name\":\"testTeamToBeDeleted\",\n\t\"description\": \"A team that will be used to see if delete REST endpoint works.\",\n\t\"personal\": false,\n\t\"orgID\":75\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-1c76b289-2933-b285-fca8-a2e0d975ac67",
+          "name": "get team by Id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/42"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-2c76908d-3844-2415-aa1b-a77050abd5b9",
+          "name": "get devices admined by a team",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/42/devices"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-bdb26a1c-db53-b139-e82c-6c04cd693d3d",
+          "name": "get groups/zones admined by a team",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/42/groups"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-2401cbef-7954-d814-7a24-82837ee7e9b5",
+          "name": "get sites admined by team",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/42/sites"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-52dfca0f-b87f-6790-3291-2df8e52b9fea",
+          "name": "team search",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"search\":{\"personal\":true}\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/search"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-f0eb2b1a-cbeb-6a1b-e094-841a96f817e5",
+          "name": "invite member to team",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"userID\": <userID>,\n\t\"role\": <teamAdmin or member>\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/<teamID>/teamMembers"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-f1b02a37-7be0-17b9-0ee8-1b8b4036c0e0",
+          "name": "update user role for team",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"userID\": <userID>,\n\t\"role\": <teamAdmin or member>\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/<teamID>/teamMembers"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-3821a903-6123-25c2-fbeb-3383e14c6f40",
+          "name": "[future] delete a team",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/48"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-b0a6fe7a-22d0-7232-4050-a391663f7459",
+          "name": "[future] get all teams",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "22394-fd13f428-3b7f-35ae-036f-cdef0e94abd9",
+      "name": "user",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "22394-68c46498-7ffb-0aec-4adc-3f80bbcdba94",
+          "name": "create new user",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"username\": \"chris@home.com\",\n\"password\" : \"password\"\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-5f493647-8c97-43ce-bce5-df55ee25b2f4",
+          "name": "delete user by id",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/584a1485cb3015983d4f0b16"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-2eda2ee5-4db7-3935-5900-5b5125edcb51",
+          "name": "get user by id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/10001"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-f34c6987-7c01-0e91-4227-53095b1fa215",
+          "name": "get user groups",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/10001/groups"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-e9cc40ad-b0b2-c452-b927-8dd5ad07493e",
+          "name": "get user teams",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/10001/teams"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-75451e82-a0e4-d73a-2c34-6aa1270f92d9",
+          "name": "get user's site",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {},
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/10001/sites"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-7bcc6ade-fc28-08d5-5f33-f57555516463",
+          "name": "get user's org",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {},
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/10001/organizations"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-9b79185a-a986-8e8c-48de-d1c932e772d1",
+          "name": "get user devices",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/10001/devices"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-2d9a59c4-8889-bfb2-7200-24398ae021bf",
+          "name": "update user password",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"password\":<new_password>\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/<userID>/updatePassword"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-7c20fa35-5a6a-7a4b-dc79-ebac377f2fe0",
+          "name": "update user",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/<userID>"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-4ae0a2b9-706e-1959-2a72-771e071a8825",
+          "name": "user search",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"search\":{\"firstName\":\"chris\"}\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/search"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-7d56ccf0-1c25-59e1-338b-a96131462300",
+          "name": "[archive] get users",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "22394-affcae3c-38f6-3061-1d4d-f4502705252d",
+      "name": "policy",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "22394-fe25e381-d38e-8767-5d48-3906d029d013",
+          "name": "get rule template classes",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/ruleTemplate/class/types"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "22394-60d775cb-4c7a-bf45-3291-d84b0e543d9c",
+          "name": "get policy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/group/150/policy"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "22394-61f83321-dafe-bb37-9a6f-febe73f23103",
+      "name": "version",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": "http://dev-edge-backend.unomiclabs.com:3002/version"
+      },
+      "response": []
+    }
+  ]
+}
