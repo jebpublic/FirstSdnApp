@@ -97,11 +97,6 @@ paths:
         required: true
         type: string
         description: ''
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Body
         in: body
         required: true
@@ -129,11 +124,6 @@ paths:
         default: Bearer {token}
         type: string
       - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Authorization
         in: header
         required: true
         type: string
@@ -184,11 +174,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -209,11 +194,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -250,11 +230,6 @@ paths:
         required: true
         type: string
         description: ''
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Body
         in: body
         required: true
@@ -280,11 +255,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -304,11 +274,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -329,11 +294,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -354,11 +314,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -379,11 +334,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -404,11 +354,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -429,11 +374,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -455,11 +395,6 @@ paths:
         default: Bearer {token}
         type: string
       - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Authorization
         in: header
         required: true
         type: string
@@ -490,11 +425,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -515,11 +445,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -551,11 +476,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -575,11 +495,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -600,11 +515,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -625,11 +535,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -650,11 +555,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -691,11 +591,6 @@ paths:
         required: true
         type: string
         description: ''
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Body
         in: body
         required: true
@@ -722,11 +617,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -747,11 +637,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -771,11 +656,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -807,11 +687,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -843,11 +718,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -879,11 +749,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -904,11 +769,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -929,11 +789,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -964,11 +819,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -989,11 +839,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1014,11 +859,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1039,11 +879,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1064,11 +899,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1089,11 +919,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -1125,11 +950,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -1160,11 +980,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -1196,11 +1011,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -1231,11 +1041,6 @@ paths:
         required: true
         type: string
         description: ''
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Body
         in: body
         required: true
@@ -1262,11 +1067,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1287,11 +1087,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1312,11 +1107,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1337,11 +1127,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1362,11 +1147,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1387,11 +1167,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1412,11 +1187,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1437,11 +1207,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -1473,11 +1238,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1498,11 +1258,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       - name: Content-Type
         in: header
         required: true
@@ -1534,11 +1289,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -1559,11 +1309,6 @@ paths:
         required: false
         default: Bearer {token}
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
