@@ -9,6 +9,7 @@ basePath: /
 securityDefinitions: {}
 schemes:
 - http
+- https
 consumes:
 - application/json
 produces:
@@ -107,13 +108,13 @@ paths:
         200:
           description: ''
           headers: {}
-  /api/device/register/macAddress:
+  /device/register/macAddress:
     post:
       description: 'TODO: Add Description'
       summary: preregister by mac
       tags:
       - device
-      operationId: ApiDeviceRegisterMacAddressPost
+      operationId: DeviceRegisterMacAddressPost
       deprecated: false
       produces:
       - application/json
@@ -209,13 +210,13 @@ paths:
         200:
           description: ''
           headers: {}
-  /api/group:
+  /group:
     post:
       description: 'TODO: Add Description'
       summary: create new group
       tags:
       - group
-      operationId: ApiGroupPost
+      operationId: GroupPost
       deprecated: false
       produces:
       - application/json
@@ -240,6 +241,7 @@ paths:
         200:
           description: ''
           headers: {}
+  /api/group:
     delete:
       description: 'TODO: Add Description'
       summary: delete group
@@ -378,13 +380,13 @@ paths:
         200:
           description: ''
           headers: {}
-  /api/group/151/inviteMember:
+  /group/151/inviteMember:
     post:
       description: 'TODO: Add Description'
       summary: invite new member
       tags:
       - group
-      operationId: ApiGroup151InviteMemberPost
+      operationId: Group151InviteMemberPost
       deprecated: false
       produces:
       - application/json
