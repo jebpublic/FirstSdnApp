@@ -21,7 +21,7 @@ paths:
       summary: login
       tags:
       - auth
-      operationId: AuthLoginPost
+      operationId: login
       deprecated: false
       produces:
       - application/json
@@ -52,7 +52,7 @@ paths:
       summary: add vnet scope
       tags:
       - controller
-      operationId: ApiControllerSkw5s0wTWScopePut
+      operationId: addvnetscope
       deprecated: false
       produces:
       - application/json
@@ -83,7 +83,7 @@ paths:
       summary: create new Copa Connector
       tags:
       - controller
-      operationId: ApiControllerPost
+      operationId: createnewCopaConnector
       deprecated: false
       produces:
       - application/json
@@ -114,7 +114,7 @@ paths:
       summary: preregister by mac
       tags:
       - device
-      operationId: DeviceRegisterMacAddressPost
+      operationId: preregisterbymac
       deprecated: false
       produces:
       - application/json
@@ -145,7 +145,7 @@ paths:
       summary: delete device
       tags:
       - device
-      operationId: ApiDeviceDeviceIDDelete
+      operationId: deletedevice
       deprecated: false
       produces:
       - application/json
@@ -165,7 +165,7 @@ paths:
       summary: get device by id
       tags:
       - device
-      operationId: ApiDeviceUserIDGet
+      operationId: getdevicebyid
       deprecated: false
       produces:
       - application/json
@@ -185,7 +185,7 @@ paths:
       summary: update device by id
       tags:
       - device
-      operationId: ApiDevice1Put
+      operationId: updatedevicebyid
       deprecated: false
       produces:
       - application/json
@@ -216,7 +216,7 @@ paths:
       summary: create new group
       tags:
       - group
-      operationId: GroupPost
+      operationId: createnewgroup
       deprecated: false
       produces:
       - application/json
@@ -247,7 +247,7 @@ paths:
       summary: delete group
       tags:
       - group
-      operationId: ApiGroupDelete
+      operationId: deletegroup
       deprecated: false
       produces:
       - application/json
@@ -266,7 +266,7 @@ paths:
       summary: '[future] get groups'
       tags:
       - group
-      operationId: ApiGroupGet
+      operationId: '[future]getgroups'
       deprecated: false
       produces:
       - application/json
@@ -286,7 +286,7 @@ paths:
       summary: get group by id
       tags:
       - group
-      operationId: ApiGroup70001Get
+      operationId: getgroupbyid
       deprecated: false
       produces:
       - application/json
@@ -306,7 +306,7 @@ paths:
       summary: get team that admins this group
       tags:
       - group
-      operationId: ApiGroup70001TeamGet
+      operationId: getteamthatadminsthisgroup
       deprecated: false
       produces:
       - application/json
@@ -326,7 +326,7 @@ paths:
       summary: get devices in a group
       tags:
       - group
-      operationId: ApiGroup70001DevicesGet
+      operationId: getdevicesinagroup
       deprecated: false
       produces:
       - application/json
@@ -346,7 +346,7 @@ paths:
       summary: group score
       tags:
       - group
-      operationId: ApiGroupGroupIDScoreGet
+      operationId: groupscore
       deprecated: false
       produces:
       - application/json
@@ -366,7 +366,7 @@ paths:
       summary: get group policy
       tags:
       - group
-      operationId: ApiGroup150PolicyGet
+      operationId: getgrouppolicy
       deprecated: false
       produces:
       - application/json
@@ -386,7 +386,7 @@ paths:
       summary: invite new member
       tags:
       - group
-      operationId: Group151InviteMemberPost
+      operationId: invitenewmember
       deprecated: false
       produces:
       - application/json
@@ -417,7 +417,7 @@ paths:
       summary: '[archive] get user registered devices'
       tags:
       - group
-      operationId: ApiUserUserIDRegisteredDevicesGet
+      operationId: '[archive]getuserregistereddevices'
       deprecated: false
       produces:
       - application/json
@@ -437,7 +437,7 @@ paths:
       summary: create new org
       tags:
       - organization
-      operationId: ApiOrganizationPost
+      operationId: createneworg
       deprecated: false
       produces:
       - application/json
@@ -468,7 +468,7 @@ paths:
       summary: get org by ID
       tags:
       - organization
-      operationId: ApiOrganization79Get
+      operationId: getorgbyID
       deprecated: false
       produces:
       - application/json
@@ -487,7 +487,7 @@ paths:
       summary: '[future] get org by ID'
       tags:
       - organization
-      operationId: ApiOrganization79Delete
+      operationId: '[future]getorgbyID'
       deprecated: false
       produces:
       - application/json
@@ -507,7 +507,7 @@ paths:
       summary: get org owned teams
       tags:
       - organization
-      operationId: ApiOrganization79TeamsGet
+      operationId: getorgownedteams
       deprecated: false
       produces:
       - application/json
@@ -527,7 +527,7 @@ paths:
       summary: get org owned sites
       tags:
       - organization
-      operationId: ApiOrganization79SitesGet
+      operationId: getorgownedsites
       deprecated: false
       produces:
       - application/json
@@ -547,7 +547,7 @@ paths:
       summary: invite member to org
       tags:
       - organization
-      operationId: ApiOrganizationOrgIDOrgMembersPost
+      operationId: invitemembertoorg
       deprecated: false
       produces:
       - application/json
@@ -578,7 +578,7 @@ paths:
       summary: create new site
       tags:
       - site
-      operationId: ApiSitePost
+      operationId: createnewsite
       deprecated: false
       produces:
       - application/json
@@ -609,7 +609,7 @@ paths:
       summary: get site by id
       tags:
       - site
-      operationId: ApiSiteSiteIDGet
+      operationId: getsitebyid
       deprecated: false
       produces:
       - application/json
@@ -629,7 +629,7 @@ paths:
       summary: get site switches
       tags:
       - site
-      operationId: ApiSiteSiteIDSwitchesGet
+      operationId: getsiteswitches
       deprecated: false
       produces:
       - application/json
@@ -648,7 +648,7 @@ paths:
       summary: add site switch
       tags:
       - site
-      operationId: ApiSiteSiteIDSwitchesPost
+      operationId: addsiteswitch
       deprecated: false
       produces:
       - application/json
@@ -679,7 +679,7 @@ paths:
       summary: Change Controller
       tags:
       - site
-      operationId: ApiSite105ControllerPut
+      operationId: ChangeController
       deprecated: false
       produces:
       - application/json
@@ -710,7 +710,7 @@ paths:
       summary: update site switch
       tags:
       - site
-      operationId: ApiSite31SwitchesPut
+      operationId: updatesiteswitch
       deprecated: false
       produces:
       - application/json
@@ -741,7 +741,7 @@ paths:
       summary: '[future] delete site by id'
       tags:
       - site
-      operationId: ApiSite52Delete
+      operationId: '[future]deletesitebyid'
       deprecated: false
       produces:
       - application/json
@@ -761,7 +761,7 @@ paths:
       summary: '[future] get sites'
       tags:
       - site
-      operationId: ApiSiteGet
+      operationId: '[future]getsites'
       deprecated: false
       produces:
       - application/json
@@ -781,7 +781,7 @@ paths:
       summary: create a team
       tags:
       - teams
-      operationId: ApiTeamPost
+      operationId: createateam
       deprecated: false
       produces:
       - application/json
@@ -811,7 +811,7 @@ paths:
       summary: '[future] get all teams'
       tags:
       - teams
-      operationId: ApiTeamGet
+      operationId: '[future]getallteams'
       deprecated: false
       produces:
       - application/json
@@ -831,7 +831,7 @@ paths:
       summary: get team by Id
       tags:
       - teams
-      operationId: ApiTeam42Get
+      operationId: getteambyId
       deprecated: false
       produces:
       - application/json
@@ -851,7 +851,7 @@ paths:
       summary: get devices admined by a team
       tags:
       - teams
-      operationId: ApiTeam42DevicesGet
+      operationId: getdevicesadminedbyateam
       deprecated: false
       produces:
       - application/json
@@ -871,7 +871,7 @@ paths:
       summary: get groups/zones admined by a team
       tags:
       - teams
-      operationId: ApiTeam42GroupsGet
+      operationId: getgroups/zonesadminedbyateam
       deprecated: false
       produces:
       - application/json
@@ -891,7 +891,7 @@ paths:
       summary: get sites admined by team
       tags:
       - teams
-      operationId: ApiTeam42SitesGet
+      operationId: getsitesadminedbyteam
       deprecated: false
       produces:
       - application/json
@@ -911,7 +911,7 @@ paths:
       summary: team search
       tags:
       - teams
-      operationId: ApiTeamSearchPost
+      operationId: teamsearch
       deprecated: false
       produces:
       - application/json
@@ -942,7 +942,7 @@ paths:
       summary: invite member to team
       tags:
       - teams
-      operationId: ApiTeamTeamIDTeamMembersPost
+      operationId: invitemembertoteam
       deprecated: false
       produces:
       - application/json
@@ -972,7 +972,7 @@ paths:
       summary: update user role for team
       tags:
       - teams
-      operationId: ApiTeamTeamIDTeamMembersPut
+      operationId: updateuserroleforteam
       deprecated: false
       produces:
       - application/json
@@ -1003,7 +1003,7 @@ paths:
       summary: '[future] delete a team'
       tags:
       - teams
-      operationId: ApiTeam48Delete
+      operationId: '[future]deleteateam'
       deprecated: false
       produces:
       - application/json
@@ -1028,7 +1028,7 @@ paths:
       summary: create new user
       tags:
       - user
-      operationId: ApiUserPost
+      operationId: createnewuser
       deprecated: false
       produces:
       - application/json
@@ -1059,7 +1059,7 @@ paths:
       summary: delete user by id
       tags:
       - user
-      operationId: ApiUser584a1485cb3015983d4f0b16Delete
+      operationId: deleteuserbyid
       deprecated: false
       produces:
       - application/json
@@ -1079,7 +1079,7 @@ paths:
       summary: get user by id
       tags:
       - user
-      operationId: ApiUser10001Get
+      operationId: getuserbyid
       deprecated: false
       produces:
       - application/json
@@ -1099,7 +1099,7 @@ paths:
       summary: get user groups
       tags:
       - user
-      operationId: ApiUser10001GroupsGet
+      operationId: getusergroups
       deprecated: false
       produces:
       - application/json
@@ -1119,7 +1119,7 @@ paths:
       summary: get user teams
       tags:
       - user
-      operationId: ApiUser10001TeamsGet
+      operationId: getuserteams
       deprecated: false
       produces:
       - application/json
@@ -1139,7 +1139,7 @@ paths:
       summary: get user's site
       tags:
       - user
-      operationId: ApiUser10001SitesGet
+      operationId: getuser'ssite
       deprecated: false
       produces:
       - application/json
@@ -1159,7 +1159,7 @@ paths:
       summary: get user's org
       tags:
       - user
-      operationId: ApiUser10001OrganizationsGet
+      operationId: getuser'sorg
       deprecated: false
       produces:
       - application/json
@@ -1179,7 +1179,7 @@ paths:
       summary: get user devices
       tags:
       - user
-      operationId: ApiUser10001DevicesGet
+      operationId: getuserdevices
       deprecated: false
       produces:
       - application/json
@@ -1199,7 +1199,7 @@ paths:
       summary: update user password
       tags:
       - user
-      operationId: ApiUserUserIDUpdatePasswordPut
+      operationId: updateuserpassword
       deprecated: false
       produces:
       - application/json
@@ -1230,7 +1230,7 @@ paths:
       summary: update user
       tags:
       - user
-      operationId: ApiUserUserIDPut
+      operationId: updateuser
       deprecated: false
       produces:
       - application/json
@@ -1250,7 +1250,7 @@ paths:
       summary: user search
       tags:
       - user
-      operationId: ApiUserSearchPost
+      operationId: usersearch
       deprecated: false
       produces:
       - application/json
@@ -1281,7 +1281,7 @@ paths:
       summary: '[archive] get users'
       tags:
       - user
-      operationId: ApiUserGet
+      operationId: '[archive]getusers'
       deprecated: false
       produces:
       - application/json
@@ -1301,7 +1301,7 @@ paths:
       summary: get rule template classes
       tags:
       - policy
-      operationId: ApiRuleTemplateClassTypesGet
+      operationId: getruletemplateclasses
       deprecated: false
       produces:
       - application/json
@@ -1321,7 +1321,7 @@ paths:
       summary: version
       tags:
       - Misc
-      operationId: VersionGet
+      operationId: version
       deprecated: false
       produces:
       - application/json
