@@ -2,7 +2,6 @@ swagger: '2.0'
 info:
   version: '1.0'
   title: edge 07-18-2017
-  description: 'TODO: Add Description'
   contact: {}
 host: dev-edge-backend.unomiclabs.com:3002
 basePath: /
@@ -17,7 +16,6 @@ produces:
 paths:
   /auth/login:
     post:
-      description: 'TODO: Add Description'
       summary: login
       tags:
       - auth
@@ -48,7 +46,6 @@ paths:
           headers: {}
   /api/controller/Skw5s0wTW/scope:
     put:
-      description: 'TODO: Add Description'
       summary: add vnet scope
       tags:
       - controller
@@ -79,7 +76,6 @@ paths:
           headers: {}
   /api/controller/:
     post:
-      description: 'TODO: Add Description'
       summary: create new Copa Connector
       tags:
       - controller
@@ -110,7 +106,6 @@ paths:
           headers: {}
   /device/register/macAddress:
     post:
-      description: 'TODO: Add Description'
       summary: preregister by mac
       tags:
       - device
@@ -141,7 +136,6 @@ paths:
           headers: {}
   /api/device/<deviceID>:
     delete:
-      description: 'TODO: Add Description'
       summary: delete device
       tags:
       - device
@@ -161,7 +155,6 @@ paths:
           headers: {}
   /api/device/<userID>:
     get:
-      description: 'TODO: Add Description'
       summary: get device by id
       tags:
       - device
@@ -181,7 +174,6 @@ paths:
           headers: {}
   /api/device/1:
     put:
-      description: 'TODO: Add Description'
       summary: update device by id
       tags:
       - device
@@ -212,7 +204,6 @@ paths:
           headers: {}
   /group:
     post:
-      description: 'TODO: Add Description'
       summary: create new group
       tags:
       - group
@@ -243,7 +234,6 @@ paths:
           headers: {}
   /api/group:
     delete:
-      description: 'TODO: Add Description'
       summary: delete group
       tags:
       - group
@@ -262,7 +252,6 @@ paths:
           description: ''
           headers: {}
     get:
-      description: 'TODO: Add Description'
       summary: '[future] get groups'
       tags:
       - group
@@ -282,7 +271,6 @@ paths:
           headers: {}
   /api/group/70001:
     get:
-      description: 'TODO: Add Description'
       summary: get group by id
       tags:
       - group
@@ -302,7 +290,6 @@ paths:
           headers: {}
   /api/group/70001/team:
     get:
-      description: 'TODO: Add Description'
       summary: get team that admins this group
       tags:
       - group
@@ -322,7 +309,6 @@ paths:
           headers: {}
   /api/group/70001/devices:
     get:
-      description: 'TODO: Add Description'
       summary: get devices in a group
       tags:
       - group
@@ -342,7 +328,6 @@ paths:
           headers: {}
   /api/group/<groupID>/score:
     get:
-      description: 'TODO: Add Description'
       summary: group score
       tags:
       - group
@@ -362,7 +347,6 @@ paths:
           headers: {}
   /api/group/150/policy:
     get:
-      description: 'TODO: Add Description'
       summary: get group policy
       tags:
       - group
@@ -382,7 +366,6 @@ paths:
           headers: {}
   /group/151/inviteMember:
     post:
-      description: 'TODO: Add Description'
       summary: invite new member
       tags:
       - group
@@ -413,7 +396,6 @@ paths:
           headers: {}
   /api/user/<userID>/registeredDevices:
     get:
-      description: 'TODO: Add Description'
       summary: '[archive] get user registered devices'
       tags:
       - group
@@ -433,7 +415,6 @@ paths:
           headers: {}
   /api/organization:
     post:
-      description: 'TODO: Add Description'
       summary: create new org
       tags:
       - organization
@@ -464,7 +445,6 @@ paths:
           headers: {}
   /api/organization/79:
     get:
-      description: 'TODO: Add Description'
       summary: get org by ID
       tags:
       - organization
@@ -483,7 +463,6 @@ paths:
           description: ''
           headers: {}
     delete:
-      description: 'TODO: Add Description'
       summary: '[future] get org by ID'
       tags:
       - organization
@@ -503,7 +482,6 @@ paths:
           headers: {}
   /api/organization/79/teams:
     get:
-      description: 'TODO: Add Description'
       summary: get org owned teams
       tags:
       - organization
@@ -523,7 +501,6 @@ paths:
           headers: {}
   /api/organization/79/sites:
     get:
-      description: 'TODO: Add Description'
       summary: get org owned sites
       tags:
       - organization
@@ -543,7 +520,6 @@ paths:
           headers: {}
   /api/organization/<orgID>/orgMembers:
     post:
-      description: 'TODO: Add Description'
       summary: invite member to org
       tags:
       - organization
@@ -567,6 +543,12 @@ paths:
         required: true
         description: ''
         schema:
+          example: >-
+            {
+
+            "userID"<invitee user id>
+
+            }
           type: string
       responses:
         200:
@@ -574,7 +556,6 @@ paths:
           headers: {}
   /api/site:
     post:
-      description: 'TODO: Add Description'
       summary: create new site
       tags:
       - site
@@ -605,7 +586,6 @@ paths:
           headers: {}
   /api/site/<siteID>:
     get:
-      description: 'TODO: Add Description'
       summary: get site by id
       tags:
       - site
@@ -625,7 +605,6 @@ paths:
           headers: {}
   /api/site/<siteID>/switches:
     get:
-      description: 'TODO: Add Description'
       summary: get site switches
       tags:
       - site
@@ -644,7 +623,6 @@ paths:
           description: ''
           headers: {}
     post:
-      description: 'TODO: Add Description'
       summary: add site switch
       tags:
       - site
@@ -675,7 +653,6 @@ paths:
           headers: {}
   /api/site/105/controller:
     put:
-      description: 'TODO: Add Description'
       summary: Change Controller
       tags:
       - site
@@ -706,7 +683,6 @@ paths:
           headers: {}
   /api/site/31/switches:
     put:
-      description: 'TODO: Add Description'
       summary: update site switch
       tags:
       - site
@@ -737,7 +713,6 @@ paths:
           headers: {}
   /api/site/52:
     delete:
-      description: 'TODO: Add Description'
       summary: '[future] delete site by id'
       tags:
       - site
@@ -757,7 +732,6 @@ paths:
           headers: {}
   /api/site/:
     get:
-      description: 'TODO: Add Description'
       summary: '[future] get sites'
       tags:
       - site
@@ -777,7 +751,6 @@ paths:
           headers: {}
   /api/team/:
     post:
-      description: 'TODO: Add Description'
       summary: create a team
       tags:
       - teams
@@ -807,7 +780,6 @@ paths:
           description: ''
           headers: {}
     get:
-      description: 'TODO: Add Description'
       summary: '[future] get all teams'
       tags:
       - teams
@@ -827,7 +799,6 @@ paths:
           headers: {}
   /api/team/42:
     get:
-      description: 'TODO: Add Description'
       summary: get team by Id
       tags:
       - teams
@@ -847,7 +818,6 @@ paths:
           headers: {}
   /api/team/42/devices:
     get:
-      description: 'TODO: Add Description'
       summary: get devices admined by a team
       tags:
       - teams
@@ -867,7 +837,6 @@ paths:
           headers: {}
   /api/team/42/groups:
     get:
-      description: 'TODO: Add Description'
       summary: get groups/zones admined by a team
       tags:
       - teams
@@ -887,7 +856,6 @@ paths:
           headers: {}
   /api/team/42/sites:
     get:
-      description: 'TODO: Add Description'
       summary: get sites admined by team
       tags:
       - teams
@@ -907,7 +875,6 @@ paths:
           headers: {}
   /api/team/search:
     post:
-      description: 'TODO: Add Description'
       summary: team search
       tags:
       - teams
@@ -938,7 +905,6 @@ paths:
           headers: {}
   /api/team/<teamID>/teamMembers:
     post:
-      description: 'TODO: Add Description'
       summary: invite member to team
       tags:
       - teams
@@ -962,13 +928,17 @@ paths:
         required: true
         description: ''
         schema:
+          example: >-
+            {
+            	"userID": <userID>,
+            	"role": <teamAdmin or member>
+            }
           type: string
       responses:
         200:
           description: ''
           headers: {}
     put:
-      description: 'TODO: Add Description'
       summary: update user role for team
       tags:
       - teams
@@ -992,6 +962,11 @@ paths:
         required: true
         description: ''
         schema:
+          example: >-
+            {
+            	"userID": <userID>,
+            	"role": <teamAdmin or member>
+            }
           type: string
       responses:
         200:
@@ -999,7 +974,6 @@ paths:
           headers: {}
   /api/team/48:
     delete:
-      description: 'TODO: Add Description'
       summary: '[future] delete a team'
       tags:
       - teams
@@ -1024,7 +998,6 @@ paths:
           headers: {}
   /api/user:
     post:
-      description: 'TODO: Add Description'
       summary: create new user
       tags:
       - user
@@ -1055,7 +1028,6 @@ paths:
           headers: {}
   /api/user/584a1485cb3015983d4f0b16:
     delete:
-      description: 'TODO: Add Description'
       summary: delete user by id
       tags:
       - user
@@ -1075,7 +1047,6 @@ paths:
           headers: {}
   /api/user/10001:
     get:
-      description: 'TODO: Add Description'
       summary: get user by id
       tags:
       - user
@@ -1095,7 +1066,6 @@ paths:
           headers: {}
   /api/user/10001/groups:
     get:
-      description: 'TODO: Add Description'
       summary: get user groups
       tags:
       - user
@@ -1115,7 +1085,6 @@ paths:
           headers: {}
   /api/user/10001/teams:
     get:
-      description: 'TODO: Add Description'
       summary: get user teams
       tags:
       - user
@@ -1135,7 +1104,6 @@ paths:
           headers: {}
   /api/user/10001/sites:
     get:
-      description: 'TODO: Add Description'
       summary: get user's site
       tags:
       - user
@@ -1155,7 +1123,6 @@ paths:
           headers: {}
   /api/user/10001/organizations:
     get:
-      description: 'TODO: Add Description'
       summary: get user's org
       tags:
       - user
@@ -1175,7 +1142,6 @@ paths:
           headers: {}
   /api/user/10001/devices:
     get:
-      description: 'TODO: Add Description'
       summary: get user devices
       tags:
       - user
@@ -1195,7 +1161,6 @@ paths:
           headers: {}
   /api/user/<userID>/updatePassword:
     put:
-      description: 'TODO: Add Description'
       summary: update user password
       tags:
       - user
@@ -1219,6 +1184,10 @@ paths:
         required: true
         description: ''
         schema:
+          example: >-
+            {
+            	"password":<new_password>
+            }
           type: string
       responses:
         200:
@@ -1226,7 +1195,6 @@ paths:
           headers: {}
   /api/user/<userID>:
     put:
-      description: 'TODO: Add Description'
       summary: update user
       tags:
       - user
@@ -1246,7 +1214,6 @@ paths:
           headers: {}
   /api/user/search:
     post:
-      description: 'TODO: Add Description'
       summary: user search
       tags:
       - user
@@ -1277,7 +1244,6 @@ paths:
           headers: {}
   /api/user/:
     get:
-      description: 'TODO: Add Description'
       summary: '[archive] get users'
       tags:
       - user
@@ -1297,7 +1263,6 @@ paths:
           headers: {}
   /api/ruleTemplate/class/types:
     get:
-      description: 'TODO: Add Description'
       summary: get rule template classes
       tags:
       - policy
@@ -1317,7 +1282,6 @@ paths:
           headers: {}
   /version:
     get:
-      description: 'TODO: Add Description'
       summary: version
       tags:
       - Misc
