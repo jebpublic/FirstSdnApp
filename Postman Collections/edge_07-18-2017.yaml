@@ -23,6 +23,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: Authorization
         in: header
@@ -52,6 +54,8 @@ paths:
       operationId: addvnetscope
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: Authorization
@@ -83,6 +87,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: Authorization
         in: header
@@ -112,6 +118,8 @@ paths:
       operationId: preregisterbymac
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: Authorization
@@ -181,6 +189,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: Authorization
         in: header
@@ -210,6 +220,8 @@ paths:
       operationId: createnewgroup
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: Authorization
@@ -373,6 +385,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: Authorization
         in: header
@@ -421,6 +435,8 @@ paths:
       operationId: createneworg
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: Authorization
@@ -527,6 +543,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: Authorization
         in: header
@@ -562,6 +580,8 @@ paths:
       operationId: createnewsite
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: Authorization
@@ -630,6 +650,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: Authorization
         in: header
@@ -660,6 +682,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: Authorization
         in: header
@@ -689,6 +713,8 @@ paths:
       operationId: updatesiteswitch
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: Authorization
@@ -757,6 +783,8 @@ paths:
       operationId: createateam
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: Authorization
@@ -882,6 +910,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: Authorization
         in: header
@@ -911,6 +941,8 @@ paths:
       operationId: invitemembertoteam
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: Authorization
@@ -945,6 +977,8 @@ paths:
       operationId: updateuserroleforteam
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: Authorization
@@ -981,6 +1015,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: Authorization
         in: header
@@ -1004,6 +1040,8 @@ paths:
       operationId: createnewuser
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: Authorization
@@ -1168,6 +1206,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: Authorization
         in: header
@@ -1220,6 +1260,8 @@ paths:
       operationId: usersearch
       deprecated: false
       produces:
+      - application/json
+      consumes:
       - application/json
       parameters:
       - name: Authorization
