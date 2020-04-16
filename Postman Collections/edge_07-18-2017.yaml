@@ -1,1791 +1,1226 @@
-swagger: '2.0'
-info:
-  version: '1.0'
-  title: edge 07-18-2017
-  contact: {}
-host: dev-edge-backend.unomiclabs.com:3002
-basePath: /
-securityDefinitions: {}
-schemes:
-- http
-- https
-consumes:
-- application/json
-produces:
-- application/json
-paths:
-  /auth/login:
-    post:
-      summary: login
-      tags:
-      - auth
-      operationId: login
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/loginrequest'
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/controller/Skw5s0wTW/scope:
-    put:
-      summary: add vnet scope
-      tags:
-      - controller
-      operationId: addvnetscope
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/addvnetscoperequest'
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/controller/:
-    post:
-      summary: create new Copa Connector
-      tags:
-      - controller
-      operationId: createnewCopaConnector
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/createnewCopaConnectorRequest'
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /device/register/macAddress:
-    post:
-      summary: preregister by mac
-      tags:
-      - device
-      operationId: preregisterbymac
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/preregisterbymacrequest'
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/device/<deviceID>:
-    delete:
-      summary: delete device
-      tags:
-      - device
-      operationId: deletedevice
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/device/<userID>:
-    get:
-      summary: get device by id
-      tags:
-      - device
-      operationId: getdevicebyid
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/device/1:
-    put:
-      summary: update device by id
-      tags:
-      - device
-      operationId: updatedevicebyid
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/updatedevicebyidrequest'
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /group:
-    post:
-      summary: create new group
-      tags:
-      - group
-      operationId: createnewgroup
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/createnewgrouprequest'
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/group:
-    delete:
-      summary: delete group
-      tags:
-      - group
-      operationId: deletegroup
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-    get:
-      summary: '[future] get groups'
-      tags:
-      - group
-      operationId: '[future]getgroups'
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/group/70001:
-    get:
-      summary: get group by id
-      tags:
-      - group
-      operationId: getgroupbyid
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/group/70001/team:
-    get:
-      summary: get team that admins this group
-      tags:
-      - group
-      operationId: getteamthatadminsthisgroup
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/group/70001/devices:
-    get:
-      summary: get devices in a group
-      tags:
-      - group
-      operationId: getdevicesinagroup
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/group/<groupID>/score:
-    get:
-      summary: group score
-      tags:
-      - group
-      operationId: groupscore
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/group/150/policy:
-    get:
-      summary: get group policy
-      tags:
-      - group
-      operationId: getgrouppolicy
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /group/151/inviteMember:
-    post:
-      summary: invite new member
-      tags:
-      - group
-      operationId: invitenewmember
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/invitenewmemberrequest'
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/user/<userID>/registeredDevices:
-    get:
-      summary: '[archive] get user registered devices'
-      tags:
-      - group
-      operationId: '[archive]getuserregistereddevices'
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/organization:
-    post:
-      summary: create new org
-      tags:
-      - organization
-      operationId: createneworg
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/createneworgrequest'
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/organization/79:
-    get:
-      summary: get org by ID
-      tags:
-      - organization
-      operationId: getorgbyID
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-    delete:
-      summary: '[future] get org by ID'
-      tags:
-      - organization
-      operationId: '[future]getorgbyID'
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/organization/79/teams:
-    get:
-      summary: get org owned teams
-      tags:
-      - organization
-      operationId: getorgownedteams
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/organization/79/sites:
-    get:
-      summary: get org owned sites
-      tags:
-      - organization
-      operationId: getorgownedsites
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/organization/<orgID>/orgMembers:
-    post:
-      summary: invite member to org
-      tags:
-      - organization
-      operationId: invitemembertoorg
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          example: >-
+{
+  "info": {
+    "_postman_id": "22394-edb18ac8-b6b2-47eb-069a-94c196d68637",
+    "name": "edge 07-18-2017",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "login",
+          "event": [
             {
-
-            "userID"<invitee user id>
-
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "if(jsonData.token)",
+                  "postman.setEnvironmentVariable(\"edgetoken\", \"bearer \" + jsonData.token);"
+                ]
+              }
             }
-          type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/site:
-    post:
-      summary: create new site
-      tags:
-      - site
-      operationId: createnewsite
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/createnewsiterequest'
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/site/<siteID>:
-    get:
-      summary: get site by id
-      tags:
-      - site
-      operationId: getsitebyid
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/site/<siteID>/switches:
-    get:
-      summary: get site switches
-      tags:
-      - site
-      operationId: getsiteswitches
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-    post:
-      summary: add site switch
-      tags:
-      - site
-      operationId: addsiteswitch
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/addsiteswitchrequest'
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/site/105/controller:
-    put:
-      summary: Change Controller
-      tags:
-      - site
-      operationId: ChangeController
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/ChangeControllerRequest'
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/site/31/switches:
-    put:
-      summary: update site switch
-      tags:
-      - site
-      operationId: updatesiteswitch
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/updatesiteswitchrequest'
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/site/52:
-    delete:
-      summary: '[future] delete site by id'
-      tags:
-      - site
-      operationId: '[future]deletesitebyid'
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/site/:
-    get:
-      summary: '[future] get sites'
-      tags:
-      - site
-      operationId: '[future]getsites'
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/team/:
-    post:
-      summary: create a team
-      tags:
-      - teams
-      operationId: createateam
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/createateamrequest'
-      responses:
-        200:
-          description: ''
-          headers: {}
-    get:
-      summary: '[future] get all teams'
-      tags:
-      - teams
-      operationId: '[future]getallteams'
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/team/42:
-    get:
-      summary: get team by Id
-      tags:
-      - teams
-      operationId: getteambyId
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/team/42/devices:
-    get:
-      summary: get devices admined by a team
-      tags:
-      - teams
-      operationId: getdevicesadminedbyateam
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/team/42/groups:
-    get:
-      summary: get groups/zones admined by a team
-      tags:
-      - teams
-      operationId: getgroups/zonesadminedbyateam
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/team/42/sites:
-    get:
-      summary: get sites admined by team
-      tags:
-      - teams
-      operationId: getsitesadminedbyteam
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/team/search:
-    post:
-      summary: team search
-      tags:
-      - teams
-      operationId: teamsearch
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/teamsearchrequest'
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/team/<teamID>/teamMembers:
-    post:
-      summary: invite member to team
-      tags:
-      - teams
-      operationId: invitemembertoteam
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          example: >-
-            {
-            	"userID": <userID>,
-            	"role": <teamAdmin or member>
-            }
-          type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-    put:
-      summary: update user role for team
-      tags:
-      - teams
-      operationId: updateuserroleforteam
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          example: >-
-            {
-            	"userID": <userID>,
-            	"role": <teamAdmin or member>
-            }
-          type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/team/48:
-    delete:
-      summary: '[future] delete a team'
-      tags:
-      - teams
-      operationId: '[future]deleteateam'
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/user:
-    post:
-      summary: create new user
-      tags:
-      - user
-      operationId: createnewuser
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/createnewuserrequest'
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/user/584a1485cb3015983d4f0b16:
-    delete:
-      summary: delete user by id
-      tags:
-      - user
-      operationId: deleteuserbyid
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/user/10001:
-    get:
-      summary: get user by id
-      tags:
-      - user
-      operationId: getuserbyid
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/user/10001/groups:
-    get:
-      summary: get user groups
-      tags:
-      - user
-      operationId: getusergroups
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/user/10001/teams:
-    get:
-      summary: get user teams
-      tags:
-      - user
-      operationId: getuserteams
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/user/10001/sites:
-    get:
-      summary: get user's site
-      tags:
-      - user
-      operationId: getuser'ssite
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/user/10001/organizations:
-    get:
-      summary: get user's org
-      tags:
-      - user
-      operationId: getuser'sorg
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/user/10001/devices:
-    get:
-      summary: get user devices
-      tags:
-      - user
-      operationId: getuserdevices
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/user/<userID>/updatePassword:
-    put:
-      summary: update user password
-      tags:
-      - user
-      operationId: updateuserpassword
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          example: >-
-            {
-            	"password":<new_password>
-            }
-          type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/user/<userID>:
-    put:
-      summary: update user
-      tags:
-      - user
-      operationId: updateuser
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/user/search:
-    post:
-      summary: user search
-      tags:
-      - user
-      operationId: usersearch
-      deprecated: false
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/usersearchrequest'
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/user/:
-    get:
-      summary: '[archive] get users'
-      tags:
-      - user
-      operationId: '[archive]getusers'
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /api/ruleTemplate/class/types:
-    get:
-      summary: get rule template classes
-      tags:
-      - policy
-      operationId: getruletemplateclasses
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-  /version:
-    get:
-      summary: version
-      tags:
-      - Misc
-      operationId: version
-      deprecated: false
-      produces:
-      - application/json
-      parameters:
-      - name: Authorization
-        in: header
-        required: false
-        default: Bearer {token}
-        type: string
-      responses:
-        200:
-          description: ''
-          headers: {}
-definitions:
-  loginrequest:
-    title: loginrequest
-    example:
-      username: jeb@unomicedge.com
-      password: unomicIs#1
-    type: object
-    properties:
-      username:
-        type: string
-      password:
-        type: string
-    required:
-    - username
-    - password
-  addvnetscoperequest:
-    title: addvnetscoperequest
-    example:
-      vnet:
-      - VmwareOvsOnTeamViewer
-      - VmwareOvsS2OnTeamViewer
-    type: object
-    properties:
-      vnet:
-        type: array
-        items:
-          type: string
-    required:
-    - vnet
-  createnewCopaConnectorRequest:
-    title: createnewCopaConnectorRequest
-    example:
-      controllerInfo:
-        CONTROLLER_IP: 172.20.0.5
-        CONTROLLER_PASSWORD: admin
-        CONTROLLER_USERNAME: Administrator
-        CONTROLLER_PORT: 8080
-        _id: local_computer
-    type: object
-    properties:
-      controllerInfo:
-        $ref: '#/definitions/ControllerInfo'
-    required:
-    - controllerInfo
-  ControllerInfo:
-    title: ControllerInfo
-    example:
-      CONTROLLER_IP: 172.20.0.5
-      CONTROLLER_PASSWORD: admin
-      CONTROLLER_USERNAME: Administrator
-      CONTROLLER_PORT: 8080
-      _id: local_computer
-    type: object
-    properties:
-      CONTROLLER_IP:
-        type: string
-      CONTROLLER_PASSWORD:
-        type: string
-      CONTROLLER_USERNAME:
-        type: string
-      CONTROLLER_PORT:
-        type: string
-      _id:
-        type: string
-    required:
-    - CONTROLLER_IP
-    - CONTROLLER_PASSWORD
-    - CONTROLLER_USERNAME
-    - CONTROLLER_PORT
-    - _id
-  preregisterbymacrequest:
-    title: preregisterbymacrequest
-    example:
-      macAddress: 00:0C:29:18:3F:3F
-      name: switch1Devices
-      deviceType: VMWare_VM
-    type: object
-    properties:
-      macAddress:
-        type: string
-      name:
-        type: string
-      deviceType:
-        type: string
-    required:
-    - macAddress
-    - name
-    - deviceType
-  updatedevicebyidrequest:
-    title: updatedevicebyidrequest
-    example:
-      id: 1
-      name: raspberry pi
-      deviceType: laptop
-      activeGroupID: 1
-    type: object
-    properties:
-      id:
-        type: integer
-        format: int32
-      name:
-        type: string
-      deviceType:
-        type: string
-      activeGroupID:
-        type: integer
-        format: int32
-    required:
-    - id
-    - name
-    - deviceType
-    - activeGroupID
-  createnewgrouprequest:
-    title: createnewgrouprequest
-    example:
-      name: test zone for team 42
-      teamID: 42
-    type: object
-    properties:
-      name:
-        type: string
-      teamID:
-        type: string
-    required:
-    - name
-    - teamID
-  invitenewmemberrequest:
-    title: invitenewmemberrequest
-    example:
-      userID: michael@unomicedge.com
-    type: object
-    properties:
-      userID:
-        type: string
-    required:
-    - userID
-  DeleteamemberfromthegroupRequest:
-    title: DeleteamemberfromthegroupRequest
-    example:
-      userID: michael@unomicedge.com
-    type: object
-    properties:
-      userID:
-        type: string
-    required:
-    - userID
-  createneworgrequest:
-    title: createneworgrequest
-    example:
-      name: test Org
-      orgAdminID: 10001
-      email: emailme@me.com
-      phone: 1234567890
-      location:
-        city: my city
-        zip: 12345
-        state: CA
-        country: US
-    type: object
-    properties:
-      name:
-        type: string
-      orgAdminID:
-        type: integer
-        format: int32
-      email:
-        type: string
-      phone:
-        type: string
-      location:
-        $ref: '#/definitions/Location'
-    required:
-    - name
-    - orgAdminID
-    - email
-    - phone
-    - location
-  Location:
-    title: Location
-    example:
-      city: my city
-      zip: 12345
-      state: CA
-      country: US
-    type: object
-    properties:
-      city:
-        type: string
-      zip:
-        type: string
-      state:
-        type: string
-      country:
-        type: string
-    required:
-    - city
-    - zip
-    - state
-    - country
-  createnewsiterequest:
-    title: createnewsiterequest
-    example:
-      siteName: the test1 -delme
-      teamID: 42
-      orgID: 75
-      createController: false
-      location:
-        addressLine1: 1230 alive drive
-        addressLine2: 
-        city: my city
-        zip: 12345
-        state: CA
-        country: US
-    type: object
-    properties:
-      siteName:
-        type: string
-      teamID:
-        type: integer
-        format: int32
-      orgID:
-        type: integer
-        format: int32
-      createController:
-        type: boolean
-      location:
-        $ref: '#/definitions/Location1'
-    required:
-    - siteName
-    - teamID
-    - orgID
-    - createController
-    - location
-  Location1:
-    title: Location1
-    example:
-      addressLine1: 1230 alive drive
-      addressLine2: 
-      city: my city
-      zip: 12345
-      state: CA
-      country: US
-    type: object
-    properties:
-      addressLine1:
-        type: string
-      addressLine2:
-        type: string
-      city:
-        type: string
-      zip:
-        type: string
-      state:
-        type: string
-      country:
-        type: string
-    required:
-    - addressLine1
-    - addressLine2
-    - city
-    - zip
-    - state
-    - country
-  ChangeControllerRequest:
-    title: ChangeControllerRequest
-    example:
-      controllerID: Skw5s0wTW
-    type: object
-    properties:
-      controllerID:
-        type: string
-    required:
-    - controllerID
-  addsiteswitchrequest:
-    title: addsiteswitchrequest
-    example:
-      switchConfig:
-        name: test switch
-        dpid: test dpid
-        macAddress: 11:22:33:44:55:66
-        ipAddress: 1.2.3.4
-        gatewayIp: 11.12.13.14
-        gatewayMac: 01.02.03.04.05.06
-        unmanagedPorts: []
-        managedPorts: []
-    type: object
-    properties:
-      switchConfig:
-        $ref: '#/definitions/SwitchConfig'
-    required:
-    - switchConfig
-  SwitchConfig:
-    title: SwitchConfig
-    example:
-      name: test switch
-      dpid: test dpid
-      macAddress: 11:22:33:44:55:66
-      ipAddress: 1.2.3.4
-      gatewayIp: 11.12.13.14
-      gatewayMac: 01.02.03.04.05.06
-      unmanagedPorts: []
-      managedPorts: []
-    type: object
-    properties:
-      name:
-        type: string
-      dpid:
-        type: string
-      macAddress:
-        type: string
-      ipAddress:
-        type: string
-      gatewayIp:
-        type: string
-      gatewayMac:
-        type: string
-      unmanagedPorts:
-        type: array
-        items:
-          type: string
-      managedPorts:
-        type: array
-        items:
-          type: string
-    required:
-    - name
-    - dpid
-    - macAddress
-    - ipAddress
-    - gatewayIp
-    - gatewayMac
-    - unmanagedPorts
-    - managedPorts
-  updatesiteswitchrequest:
-    title: updatesiteswitchrequest
-    example:
-      switchConfig:
-        name: test switch
-        dpid: test dpid
-        macAddress: 11:22:33:44:55:66
-        ipAddress: 1.2.3.4
-        gatewayIp: 11.12.13.14
-        gatewayMac: 01.02.03.04.05.06
-        unmanagedPorts: []
-        managedPorts: []
-    type: object
-    properties:
-      switchConfig:
-        $ref: '#/definitions/SwitchConfig'
-    required:
-    - switchConfig
-  createateamrequest:
-    title: createateamrequest
-    example:
-      userID: 10001
-      name: testTeamToBeDeleted
-      description: A team that will be used to see if delete REST endpoint works.
-      personal: false
-      orgID: 75
-    type: object
-    properties:
-      userID:
-        type: integer
-        format: int32
-      name:
-        type: string
-      description:
-        type: string
-      personal:
-        type: boolean
-      orgID:
-        type: integer
-        format: int32
-    required:
-    - userID
-    - name
-    - description
-    - personal
-    - orgID
-  teamsearchrequest:
-    title: teamsearchrequest
-    example:
-      search:
-        personal: true
-    type: object
-    properties:
-      search:
-        $ref: '#/definitions/Search'
-    required:
-    - search
-  Search:
-    title: Search
-    example:
-      personal: true
-    type: object
-    properties:
-      personal:
-        type: boolean
-    required:
-    - personal
-  createnewuserrequest:
-    title: createnewuserrequest
-    example:
-      username: chris@home.com
-      password: password
-    type: object
-    properties:
-      username:
-        type: string
-      password:
-        type: string
-    required:
-    - username
-    - password
-  usersearchrequest:
-    title: usersearchrequest
-    example:
-      search:
-        firstName: chris
-    type: object
-    properties:
-      search:
-        $ref: '#/definitions/Search1'
-    required:
-    - search
-  Search1:
-    title: Search1
-    example:
-      firstName: chris
-    type: object
-    properties:
-      firstName:
-        type: string
-    required:
-    - firstName
-tags:
-- name: auth
-- name: controller
-- name: device
-- name: group
-- name: organization
-- name: site
-- name: teams
-  description: team api calls
-- name: user
-- name: policy
-- name: Misc
-  description: ''
+          ],
+          "_postman_id": "22394-68a8d46a-a984-eaf0-10e2-1c5fdb499327",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \n\"username\":\"jeb@unomicedge.com\",\n\"password\":\"unomicIs#1\"\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/auth/login"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "22394-84c169f0-536b-006d-ef9e-55af832adeeb"
+    },
+    {
+      "name": "controller",
+      "item": [
+        {
+          "name": "add vnet scope",
+          "_postman_id": "22394-b65c79d5-0fba-3799-4f30-119f71687ed0",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"vnet\":[\"VmwareOvsOnTeamViewer\",\"VmwareOvsS2OnTeamViewer\"]}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/controller/Skw5s0wTW/scope"
+          },
+          "response": []
+        },
+        {
+          "name": "create new Copa Connector",
+          "_postman_id": "22394-ad1d519c-7985-d199-c40e-e40c871f7941",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"controllerInfo\":{\n\t\t\"CONTROLLER_IP\":\"172.20.0.5\",\n\t\t\"CONTROLLER_PASSWORD\":\"admin\",\n\t\t\"CONTROLLER_USERNAME\":\"Administrator\",\n\t\t\"CONTROLLER_PORT\":\"8080\",\n\t\t\"_id\": \"local_computer\"\n\t}\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/controller/"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "22394-2d7a918c-e0d5-809b-7c14-431b2f2b18a1"
+    },
+    {
+      "name": "device",
+      "item": [
+        {
+          "name": "preregister by mac",
+          "_postman_id": "22394-93c84d9e-3928-354b-2e66-e65794470c01",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"macAddress\":\"00:0C:29:18:3F:3F\",\n\t\"name\":\"switch1Devices\",\n\t\"deviceType\": \"VMWare_VM\"\n}"
+            },
+            "url": "dev-edge-backend.unomiclabs.com:3002/api/device/register/macAddress"
+          },
+          "response": []
+        },
+        {
+          "name": "delete device",
+          "_postman_id": "22394-9178db78-301c-7fe4-7443-8c43786144a4",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/device/<deviceID>"
+          },
+          "response": []
+        },
+        {
+          "name": "get device by id",
+          "_postman_id": "22394-b1030fec-4a4d-9a78-1344-cd1220c8ac89",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/device/<userID>"
+          },
+          "response": []
+        },
+        {
+          "name": "update device by id",
+          "_postman_id": "22394-c561b7eb-291c-b947-af30-b374157743f7",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"name\": \"raspberry pi\",\n  \"deviceType\": \"laptop\",\n  \"activeGroupID\": 1\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/device/1"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "22394-ea836673-d8f2-d837-6d0e-78d6a472f1cf"
+    },
+    {
+      "name": "group",
+      "item": [
+        {
+          "name": "create new group",
+          "_postman_id": "22394-6fabaece-8461-2013-f79d-3597a966ab56",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n \"name\":\"test zone for team 42\",\n \"teamID\":\"42\"\n}"
+            },
+            "url": "dev-edge-backend.unomiclabs.com:3002/api/group"
+          },
+          "response": []
+        },
+        {
+          "name": "delete group",
+          "_postman_id": "22394-fb610cc4-aba4-c2bf-e061-ce289e663a9f",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/group"
+          },
+          "response": []
+        },
+        {
+          "name": "get group by id",
+          "_postman_id": "22394-e5d1f407-cb99-c722-3a94-34fd26d998ec",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/group/70001"
+          },
+          "response": []
+        },
+        {
+          "name": "get team that admins this group",
+          "_postman_id": "22394-3d81ca18-e7af-94b7-99da-8575b9d24f4b",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/group/70001/team"
+          },
+          "response": []
+        },
+        {
+          "name": "get devices in a group",
+          "_postman_id": "22394-fdd73cfd-4192-d9ed-2c5b-8a4be7b864a9",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/group/70001/devices"
+          },
+          "response": []
+        },
+        {
+          "name": "group score",
+          "_postman_id": "22394-9b61ab27-3691-47e7-4cd2-23a5b0c6a6cf",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/group/<groupID>/score"
+          },
+          "response": []
+        },
+        {
+          "name": "get group policy",
+          "_postman_id": "22394-b653d67c-383e-46af-2c17-c4e48dfb2bb3",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/group/150/policy"
+          },
+          "response": []
+        },
+        {
+          "name": "invite new member",
+          "_postman_id": "22394-25ec1335-2bb4-f685-e7f2-ca4d9d019875",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"userID\": \"michael@unomicedge.com\"\n}"
+            },
+            "url": "dev-edge-backend.unomiclabs.com:3002/api/group/151/inviteMember"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete a member from the group",
+          "_postman_id": "22394-1d3081b0-9d56-4e78-871d-1cc1f488423a",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"userID\": \"michael@unomicedge.com\"\n}"
+            },
+            "url": "dev-edge-backend.unomiclabs.com:3002/api/group/151/inviteMember"
+          },
+          "response": []
+        },
+        {
+          "name": "[future] get groups",
+          "_postman_id": "22394-6dbf310d-479d-3f66-b5f4-175276fc447f",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/group"
+          },
+          "response": []
+        },
+        {
+          "name": "[archive] get user registered devices",
+          "_postman_id": "22394-863cb701-e4c6-7e32-f4e9-1960361d32a5",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/<userID>/registeredDevices"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "22394-9350893d-db5a-c7c8-fa22-2faeaed1a5db"
+    },
+    {
+      "name": "organization",
+      "item": [
+        {
+          "name": "create new org",
+          "_postman_id": "22394-43d42700-188a-14dc-fdb4-9fc2b6010ac9",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"name\":\"test Org\",\n\t\"orgAdminID\":10001,\n\t\"email\":\"emailme@me.com\",\n\t\"phone\":\"1234567890\",\n\t\"location\":{\n\t\t\"city\":\"my city\", \n\t\"zip\":\"12345\",\n\t\"state\":\"CA\",\n\t\"country\":\"US\"\n\t}\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/organization"
+          },
+          "response": []
+        },
+        {
+          "name": "get org by ID",
+          "_postman_id": "22394-bc790b02-9184-2b87-6c28-7a79e1805102",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/organization/79"
+          },
+          "response": []
+        },
+        {
+          "name": "get org owned teams",
+          "_postman_id": "22394-3092cc0f-5ab7-5bf1-783e-e907b683f84d",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/organization/79/teams"
+          },
+          "response": []
+        },
+        {
+          "name": "get org owned sites",
+          "_postman_id": "22394-46e84ed9-7fdf-7fd9-29e5-d938e263cd82",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/organization/79/sites"
+          },
+          "response": []
+        },
+        {
+          "name": "invite member to org",
+          "_postman_id": "22394-56a287e0-ad34-3972-e530-65fef11a333b",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"userID\"<invitee user id>\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/organization/<orgID>/orgMembers"
+          },
+          "response": []
+        },
+        {
+          "name": "[future] get org by ID",
+          "_postman_id": "22394-37480399-8119-df6f-43be-c32350c29fac",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/organization/79"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "22394-2805a2e3-734a-f00c-ef51-d7cc2f1ec73e"
+    },
+    {
+      "name": "site",
+      "item": [
+        {
+          "name": "create new site",
+          "_postman_id": "22394-bd66485c-ecf2-5315-4e43-b572ee7f3c72",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"siteName\": \"the test1 -delme\",\n\"teamID\": 42,\n\"orgID\":75,\n\"createController\":false,\n\"location\":{\n\t\t        \"addressLine1\": \"1230 alive drive\",\n        \"addressLine2\": null,\n\t\t\"city\":\"my city\", \n\t\"zip\":\"12345\",\n\t\"state\":\"CA\",\n\t\"country\":\"US\"\n\t}\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/site"
+          },
+          "response": []
+        },
+        {
+          "name": "get site by id",
+          "_postman_id": "22394-9e8bb87b-1445-9021-a720-f612354e0fb2",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/site/<siteID>"
+          },
+          "response": []
+        },
+        {
+          "name": "get site switches",
+          "_postman_id": "22394-c316b866-31eb-0597-6d68-1ce97dd46992",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/site/<siteID>/switches"
+          },
+          "response": []
+        },
+        {
+          "name": "Change Controller",
+          "_postman_id": "22394-f6167fa3-95fa-656b-9bcf-80706d54227d",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"controllerID\":\"Skw5s0wTW\"}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/site/105/controller"
+          },
+          "response": []
+        },
+        {
+          "name": "add site switch",
+          "_postman_id": "22394-c9ebf15e-5d65-80d6-5210-0ea7fc5bace7",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"switchConfig\":{\n\t\"name\": \"test switch\",\n\t\"dpid\":\"test dpid\",\n\t\"macAddress\":\"11:22:33:44:55:66\",\n\t\"ipAddress\":\"1.2.3.4\",\n\t\"gatewayIp\":\"11.12.13.14\",\n\t\"gatewayMac\":\"01.02.03.04.05.06\",\n\t\"unmanagedPorts\":[],\n\t\"managedPorts\":[]\n}}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/site/<siteID>/switches"
+          },
+          "response": []
+        },
+        {
+          "name": "update site switch",
+          "_postman_id": "22394-0ed02fff-8dc8-0e30-a522-47290467822d",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"switchConfig\":{\n\t\"name\": \"test switch\",\n\t\"dpid\":\"test dpid\",\n\t\"macAddress\":\"11:22:33:44:55:66\",\n\t\"ipAddress\":\"1.2.3.4\",\n\t\"gatewayIp\":\"11.12.13.14\",\n\t\"gatewayMac\":\"01.02.03.04.05.06\",\n\t\"unmanagedPorts\":[],\n\t\"managedPorts\":[]\n}}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/site/31/switches"
+          },
+          "response": []
+        },
+        {
+          "name": "[future] delete site by id",
+          "_postman_id": "22394-ebb38ec9-f964-100a-8509-e6e1d17b060f",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/site/52"
+          },
+          "response": []
+        },
+        {
+          "name": "[future] get sites",
+          "_postman_id": "22394-6d73e90f-b456-77a0-5bab-123593ab0e82",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/site/"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "22394-24001188-598c-9882-b617-f50d2f461bc5"
+    },
+    {
+      "name": "teams",
+      "item": [
+        {
+          "name": "create a team",
+          "_postman_id": "22394-ff55161e-a5e5-a2fe-ee3c-851bc29bf1c1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"userID\": 10001,\n\t\"name\":\"testTeamToBeDeleted\",\n\t\"description\": \"A team that will be used to see if delete REST endpoint works.\",\n\t\"personal\": false,\n\t\"orgID\":75\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/"
+          },
+          "response": []
+        },
+        {
+          "name": "get team by Id",
+          "_postman_id": "22394-1c76b289-2933-b285-fca8-a2e0d975ac67",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/42"
+          },
+          "response": []
+        },
+        {
+          "name": "get devices admined by a team",
+          "_postman_id": "22394-2c76908d-3844-2415-aa1b-a77050abd5b9",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/42/devices"
+          },
+          "response": []
+        },
+        {
+          "name": "get groups/zones admined by a team",
+          "_postman_id": "22394-bdb26a1c-db53-b139-e82c-6c04cd693d3d",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/42/groups"
+          },
+          "response": []
+        },
+        {
+          "name": "get sites admined by team",
+          "_postman_id": "22394-2401cbef-7954-d814-7a24-82837ee7e9b5",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/42/sites"
+          },
+          "response": []
+        },
+        {
+          "name": "team search",
+          "_postman_id": "22394-52dfca0f-b87f-6790-3291-2df8e52b9fea",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"search\":{\"personal\":true}\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/search"
+          },
+          "response": []
+        },
+        {
+          "name": "invite member to team",
+          "_postman_id": "22394-f0eb2b1a-cbeb-6a1b-e094-841a96f817e5",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"userID\": <userID>,\n\t\"role\": <teamAdmin or member>\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/<teamID>/teamMembers"
+          },
+          "response": []
+        },
+        {
+          "name": "update user role for team",
+          "_postman_id": "22394-f1b02a37-7be0-17b9-0ee8-1b8b4036c0e0",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"userID\": <userID>,\n\t\"role\": <teamAdmin or member>\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/<teamID>/teamMembers"
+          },
+          "response": []
+        },
+        {
+          "name": "[future] delete a team",
+          "_postman_id": "22394-3821a903-6123-25c2-fbeb-3383e14c6f40",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/48"
+          },
+          "response": []
+        },
+        {
+          "name": "[future] get all teams",
+          "_postman_id": "22394-b0a6fe7a-22d0-7232-4050-a391663f7459",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/team/"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "22394-f29ee23a-2f28-f522-2732-47795e8d1681",
+      "description": "team api calls"
+    },
+    {
+      "name": "user",
+      "item": [
+        {
+          "name": "create new user",
+          "_postman_id": "22394-68c46498-7ffb-0aec-4adc-3f80bbcdba94",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"username\": \"chris@home.com\",\n\"password\" : \"password\"\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user"
+          },
+          "response": []
+        },
+        {
+          "name": "delete user by id",
+          "_postman_id": "22394-5f493647-8c97-43ce-bce5-df55ee25b2f4",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/584a1485cb3015983d4f0b16"
+          },
+          "response": []
+        },
+        {
+          "name": "get user by id",
+          "_postman_id": "22394-2eda2ee5-4db7-3935-5900-5b5125edcb51",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/10001"
+          },
+          "response": []
+        },
+        {
+          "name": "get user groups",
+          "_postman_id": "22394-f34c6987-7c01-0e91-4227-53095b1fa215",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/10001/groups"
+          },
+          "response": []
+        },
+        {
+          "name": "get user teams",
+          "_postman_id": "22394-e9cc40ad-b0b2-c452-b927-8dd5ad07493e",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/10001/teams"
+          },
+          "response": []
+        },
+        {
+          "name": "get user's site",
+          "_postman_id": "22394-75451e82-a0e4-d73a-2c34-6aa1270f92d9",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/10001/sites"
+          },
+          "response": []
+        },
+        {
+          "name": "get user's org",
+          "_postman_id": "22394-7bcc6ade-fc28-08d5-5f33-f57555516463",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/10001/organizations"
+          },
+          "response": []
+        },
+        {
+          "name": "get user devices",
+          "_postman_id": "22394-9b79185a-a986-8e8c-48de-d1c932e772d1",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/10001/devices"
+          },
+          "response": []
+        },
+        {
+          "name": "update user password",
+          "_postman_id": "22394-2d9a59c4-8889-bfb2-7200-24398ae021bf",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"password\":<new_password>\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/<userID>/updatePassword"
+          },
+          "response": []
+        },
+        {
+          "name": "update user",
+          "_postman_id": "22394-7c20fa35-5a6a-7a4b-dc79-ebac377f2fe0",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/<userID>"
+          },
+          "response": []
+        },
+        {
+          "name": "user search",
+          "_postman_id": "22394-4ae0a2b9-706e-1959-2a72-771e071a8825",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"search\":{\"firstName\":\"chris\"}\n}"
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/search"
+          },
+          "response": []
+        },
+        {
+          "name": "[archive] get users",
+          "_postman_id": "22394-7d56ccf0-1c25-59e1-338b-a96131462300",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/user/"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "22394-fd13f428-3b7f-35ae-036f-cdef0e94abd9"
+    },
+    {
+      "name": "policy",
+      "item": [
+        {
+          "name": "get rule template classes",
+          "_postman_id": "22394-fe25e381-d38e-8767-5d48-3906d029d013",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/ruleTemplate/class/types"
+          },
+          "response": []
+        },
+        {
+          "name": "get policy",
+          "_postman_id": "22394-60d775cb-4c7a-bf45-3291-d84b0e543d9c",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDEsImlhdCI6MTUxMDM0ODUwMCwiZXhwIjoxNTEwMzkxNzAwfQ.5j4s9nGT1oyXqpx87nuktrhvsDBhd6p0obWAB-zg2qQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://dev-edge-backend.unomiclabs.com:3002/api/group/150/policy"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "22394-affcae3c-38f6-3061-1d4d-f4502705252d"
+    },
+    {
+      "name": "version",
+      "_postman_id": "22394-61f83321-dafe-bb37-9a6f-febe73f23103",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": "http://dev-edge-backend.unomiclabs.com:3002/version"
+      },
+      "response": []
+    }
+  ]
+}
